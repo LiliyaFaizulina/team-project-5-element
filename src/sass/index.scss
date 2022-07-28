@@ -1,7 +1,9 @@
 @import './base/common';
 @import './base/reset';
-@import './utils/vars';
 @import './utils/mixins';
+@import './utils/vars';
+@import './utils/normalize-min';
+@import './utils/fonts';
 @import './utils/visually-hidden';
 @import './layout/header';
 @import './layout/hero';
