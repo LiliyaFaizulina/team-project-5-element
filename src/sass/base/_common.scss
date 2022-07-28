@@ -1,1 +1,28 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  color: #b9b9b9;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: calc(20 / 12);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(mobile) {
+    width: 320px;
+  }
+
+  @include mq(tablet) {
+    width: 728px;
+  }
+
+  @include mq(desktop) {
+    width: 1354px;
+  }
+}
