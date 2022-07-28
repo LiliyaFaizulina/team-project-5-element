@@ -17,12 +17,6 @@ ol {
   list-style: none;
 }
 
-body {
-  font-family: $mainFontFamily, sans-serif;
-  color: map-get($colors, 'primaryText');
-  font-size: 14px;
-}
-
 img {
   display: block;
   max-width: 100%;
