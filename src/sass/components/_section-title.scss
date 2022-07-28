@@ -1,0 +1,23 @@
+.section-title {
+  @include textStyle(var(--title-text-color), 14px, 1.3);
+  font-weight: 800;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  &--light-theme {
+    color: var(--light-text-color);
+  }
+
+  @include mq(tablet) {
+    font-size: 26px;
+  }
+
+  @include mq(desktop) {
+    font-size: 46px;
+  }
+}
+
+.accent-text {
+  color: var(--accent-text-color);
+}
