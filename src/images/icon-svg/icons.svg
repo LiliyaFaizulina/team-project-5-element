@@ -206,19 +206,14 @@
       <!--Mobile and Tablet-->
 
       <symbol id="icon-close-menu" viewBox="0 0 30 32">
-         <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter"
+         <path stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter"
             stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" d="M1.781 28.885l25.77-25.77"></path>
-         <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter"
+         <path stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter"
             stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" d="M27.552 28.885l-25.77-25.77"></path>
       </symbol>
-      <symbol id="icon-burger-menu" viewBox="0 0 53 32">
-         <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.5714"
-            d="M2.286 2.286h48"></path>
-         <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.5714"
-            d="M2.286 16h48"></path>
-         <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.5714"
-            d="M2.286 29.714h48"></path>
-      </symbol>
+      <symbol id="icon-burger-menu" viewBox="0 0 48 32">
+<path d="M0 5.333v-5.333h48v5.333h-48zM0 18.667h48v-5.333h-48v5.333zM0 32h48v-5.333h-48v5.333z"></path>
+</symbol>
 
 
    </defs>
