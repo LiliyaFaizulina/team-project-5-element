@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container-nav {
+    display: none;
+}
+.menu-btn {
+    border: none;
+}
+.menu-btn__close,
+.menu-btn__icon
+ {
+    color: #000000;
+    fill:#000;
+    background-color: #000000;
+}
+.menu-btn__open
+ {    
+    fill: #000;
+  }
