@@ -2,7 +2,7 @@
   @include flexBox(inline-flex);
   padding: 14px 5px;
 
-  max-height: 48px;
+  height: 48px;
   min-width: 260px;
 
   outline: 2px solid var(--accent-background);
@@ -18,7 +18,7 @@
   cursor: pointer;
 
   @include mq(desktop) {
-    max-height: 70px;
+    height: 70px;
     min-width: 354px;
     font-size: 14px;
     letter-spacing: 0.14em;
