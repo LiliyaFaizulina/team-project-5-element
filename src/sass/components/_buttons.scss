@@ -30,6 +30,7 @@
     @include mq(tablet) {
       letter-spacing: 0.14em;
     }
+
     @include mq(desktop) {
       min-width: 336px;
     }
