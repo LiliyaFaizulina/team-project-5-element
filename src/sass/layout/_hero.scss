@@ -1,0 +1,25 @@
+.hero__title {
+        margin-bottom: 8px;
+
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.3;
+            
+        letter-spacing: 0.03em;
+    
+        color: var(--title-text-color);
+}
+p {
+    font-size: 14px;
+    line-height: 1.57;
+}
+.hero__benefit {
+    font-weight: 700;
+    color: var(--title-text-color);
+}
+.hero__points {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    color: var(--accent-text-color);
+}
