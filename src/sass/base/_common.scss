@@ -6,6 +6,12 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: calc(20 / 12);
+  letter-spacing: 0.08em;
+
+  @include mq(desktop) {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
 }
 
 .container {
@@ -14,9 +20,10 @@ body {
 
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
 
   @include mq(mobile) {
-    width: 320px;
+    width: 480px;
   }
 
   @include mq(tablet) {

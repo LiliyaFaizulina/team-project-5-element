@@ -1,5 +1,5 @@
 .section-title {
-  @include textStyle(var(--title-text-color), 14px, 1.3);
+  @include textStyle(var(--title-text-color), 20px, 1.3);
   font-weight: 800;
 
   text-align: center;
