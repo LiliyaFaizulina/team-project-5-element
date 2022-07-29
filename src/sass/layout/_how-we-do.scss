@@ -45,17 +45,15 @@
 
   &:hover {
     background-color: var(--accent-background);
-
-    &:hover .activity__link,
-    &:hover .activity__subtitle,
-    &:hover .activity__text {
-      color: var(--light-text-color);
-    }
   }
 }
 
 .activity__link {
   color: var(--accent-background);
+
+  .activity__item:hover & {
+    color: var(--light-text-color);
+  }
 }
 
 .activity__icon {
@@ -80,13 +78,16 @@
     margin-bottom: 32px;
   }
 
-  &.activity__subtitle::after {
-    content: '';
+  &::after {
+    //  content: '';
+    //  padding-top: 20px;
+    //  width: 20x;
 
-    padding-bottom: 20px;
+    //  border-bottom: 2px solid var(--accent-text-color);
+  }
 
-    width: 20px;
-    border: 2px solid var(--accent-background);
+  .activity__item:hover & {
+    color: var(--light-text-color);
   }
 }
 
@@ -98,5 +99,9 @@
 
   @include mq(desktop) {
     font-size: 18px;
+  }
+
+  .activity__item:hover & {
+    color: var(--light-text-color);
   }
 }
