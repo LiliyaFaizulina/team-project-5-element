@@ -1,0 +1,38 @@
+.btn {
+  @include flexBox(inline-flex);
+  padding: 14px 5px;
+
+  max-height: 48px;
+  min-width: 260px;
+
+  outline: 2px solid var(--accent-background);
+  outline-offset: -2px;
+  border: none;
+
+  background-color: var(--accent-background);
+  @include textStyle(var(--light-text-color), 12px, 1.25, 00.08em);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  @include mq(desktop) {
+    max-height: 70px;
+    min-width: 354px;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+  }
+
+  &--light-theme {
+    background-color: transparent;
+    color: var(--accent-text-color);
+
+    @include mq(tablet) {
+      letter-spacing: 0.14em;
+    }
+
+    @include mq(desktop) {
+      min-width: 336px;
+    }
+  }
+}
