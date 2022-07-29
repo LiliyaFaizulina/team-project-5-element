@@ -5,10 +5,153 @@
   padding-bottom: 55px;
 
   max-width: 480px;
+  min-height: 507px;
   background-color: var(--black-background);
   background-image: url(../images/contacts/registration-bg-md.png);
-
+  @include mq(retina) {
+    background-image: url(../images/contacts/registration-bg-md@2x.png);
+  }
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include mq(tablet) {
+    padding-top: 60px;
+    padding-bottom: 68px;
+    max-width: 768px;
+    height: 520px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 100px;
+    padding-bottom: 62px;
+
+    max-width: 1680px;
+    height: 840px;
+    background-image: url(../images/contacts/registration-bg-lg.png);
+    @include mq(retina) {
+      background-image: url(../images/contacts/registration-bg-lg@2x.png);
+    }
+  }
+
+  text-align: center;
+}
+
+.contacts__title {
+  margin-bottom: 25px;
+
+  @include mq(tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.contacts__text {
+  & + & {
+    margin-bottom: 43px;
+
+    @include mq(tablet) {
+      margin-bottom: 40px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 56px;
+    }
+  }
+
+  font-weight: 600;
+  @include textStyle(var(--light-text-color), 12px, calc(15 / 12));
+
+  @include mq(tablet) {
+    font-size: 16px;
+  }
+
+  @include mq(desktop) {
+    font-size: 30px;
+  }
+}
+
+.registration__field {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(not-desktop) {
+    min-width: 280px;
+    max-width: 390px;
+  }
+
+  &:first-child {
+    margin-bottom: 20px;
+
+    @include mq(desktop) {
+      margin-bottom: 30px;
+    }
+  }
+  @include mq(desktop) {
+    width: 478px;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
+  @include textStyle(var(--light-text-color), 14px, calc(17 / 14));
+  font-weight: 600;
+}
+
+.registration__label {
+  position: absolute;
+  top: 15px;
+  left: 28px;
+  @include mq(desktop) {
+    top: 23px;
+    left: 40px;
+  }
+  transition: transform var(--animation), color var(--animation);
+
+  .registration__input:not(:placeholder-shown) ~ &,
+  .registration__input:focus ~ &,
+  .registration__input:hover ~ & {
+    transform: translateY(-200%);
+    color: var(--accent-text-color);
+  }
+}
+
+.registration__input {
+  padding-left: 28px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  border: none;
+
+  @include mq(desktop) {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
+
+  @include textStyle(var(--light-text-color), 14px, calc(17 / 14));
+  font-weight: 600;
+  background-color: transparent;
+  outline: 1px solid var(--light-text-color);
+  outline-offset: -1px;
+  transition: outline-color var(--animation);
+
+  &:hover,
+  &:focus {
+    outline-color: var(--accent-background);
+  }
+}
+
+.registration__btn {
+  margin-top: 50px;
+
+  @include mq(tablet) {
+    margin-top: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 80px;
+  }
 }
