@@ -1,27 +1,26 @@
 <header>
-    <nav>
-        <div class="container-header">
-        <div class="logo">
-        <a href="./index.html"><span class="logo__hell">Hell</span>
-            <svg width="14" height="20"><use href="./images/icon-svg/icons.svg#icon-logo"></use></svg>
-            <span class="logo__en">EN</span>&nbsp<span class="logo__hellish">Hellish</span>&nbsp<span class="logo__english">english</span></a>
+    <div class="container">
+        <a class="logo" href="./index.html">
+            <svg width="128" height="45">
+                <use href="./images/icon-svg/icons.svg#icon-logo"></use>
+            </svg>
+        </a>
+        <div class="container-nav">
+            <nav>
+                <ul class="site-nav">
+                    <li class="site-nav__item"><a class="site-nav__link" href="" name="">Studying program</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="" name="">about</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="" name="">training options</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="" name="">contacts</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="btn btn--light-theme call-btn">consultation by phone</button>
         </div>
-        <ul class="menu-vector">
-            <li class="menu-vector__open-menu"></li>
-            <li class="menu-vector__open-menu"></li>
-            <li class="menu-vector__open-menu"></li>
-            <li class="menu-vector__close-menu"></li>
-            <li class="menu-vector__close-menu"></li>
-        </ul>
-        <button type="button" aria-expanded="false" aria-controls="menu-container" class="menu-btn" data-menu-button>
+        <button style=background:tomato type="button" aria-expanded="false" aria-controls="menu-container" class="menu-btn" data-menu-button>
+            <svg width="30" height="30">
+                <use class="menu-btn__close" href="./images/icon-svg/icons.svg#icon-close-menu"></use>
+                <use class="menu-btn__open" href="./images/icon-svg/icons.svg#icon-burger-menu"></use>
+            </svg>
         </button>
-        <ul class="site-nav">
-            <li class="site-nav__item"><a class="site-nav__link" href="" name="">Studying program</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="" name="">about</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="" name="">training options</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="" name="">contacts</a></li>
-        </ul>
-        <button type="button" class="call-btn">consultation by phone</button>
-        </div>
-    </nav>
+    </div>
 </header>
