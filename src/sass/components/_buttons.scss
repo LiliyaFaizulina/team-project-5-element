@@ -10,9 +10,10 @@
   border: none;
 
   background-color: var(--accent-background);
-  @include textStyle(var(--light-text-color), 12px, 1.25, 00.08em);
+  @include textStyle(var(--light-text-color), 12px, 1.25);
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
 
   cursor: pointer;
 

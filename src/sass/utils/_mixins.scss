@@ -4,17 +4,16 @@
   justify-content: $content;
 }
 
-@mixin textStyle($color, $fontSize, $lineHeight, $letterSpace: 0.03em) {
+@mixin textStyle($color, $fontSize, $lineHeight) {
   color: $color;
   font-size: $fontSize;
   line-height: $lineHeight;
-  letter-spacing: $letterSpace;
 }
 
 @mixin mq($type) {
-  $mobile: 320px;
+  $mobile: 480px;
   $tablet: 768px;
-  $desktop: 1440px;
+  $desktop: 1366px;
 
   @if $type == mobile {
     @media screen and (min-width: $mobile) {
