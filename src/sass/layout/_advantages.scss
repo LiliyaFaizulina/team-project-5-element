@@ -1,0 +1,41 @@
+.advantages {
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+.advantages__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 37px;
+}
+.advantages__description {
+    width: 146px;
+}
+.advantages__test::before {
+        
+        display: inline;
+        width: 60px;
+        height: 60px;
+
+        .advantages__item:nth-child(1) & {
+            content: url("../images/icon-svg/icon-female-student.svg");
+        }
+        .advantages__item:nth-child(2) & {
+            content: url("../images/icon-svg/icon-mobile-learning.svg");
+        }
+        .advantages__item:nth-child(3) & {
+            content: url("../images/icon-svg/icon-insurance.svg");
+        }
+}
+
+.advantages__item {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.65;
+    
+    color: var(--title-text-color);
+}
