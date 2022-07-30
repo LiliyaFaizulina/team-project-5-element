@@ -1,3 +1,19 @@
+.hero {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 35px;
+    max-width: 480px;
+
+    @include mq(tablet) {
+        max-width: 768px;
+    }
+
+    @include mq(desktop) {
+        max-width: 1680px;
+    }
+}
 .hero__title {
         margin-bottom: 8px;
 
@@ -9,7 +25,9 @@
     
         color: var(--title-text-color);
 }
-p {
+.hero__warning,
+.hero__benefit,
+.hero__points{
     font-size: 14px;
     line-height: 1.57;
 }
@@ -22,4 +40,24 @@ p {
 
     font-weight: 700;
     color: var(--accent-text-color);
+}
+.lesson-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+}
+.wave-bg {
+    max-width: 100%;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    z-index: -1;
+
+    filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.04));
+}
+.hero__img {
+    margin-top: 54px;
+    margin-left: auto;
+    margin-right: auto;
 }
