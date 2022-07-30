@@ -108,15 +108,17 @@
   transition: transform var(--animation), color var(--animation);
 
   .registration__input:not(:placeholder-shown) ~ &,
-  .registration__input:focus ~ &,
-  .registration__input:hover ~ & {
-    transform: translateY(-200%);
+  .registration__input:focus ~ & {
+    transform: translateY(-200%) translateX(-28px);
     color: var(--accent-text-color);
+    @include mq(desktop) {
+      transform: translateY(-200%) translateX(-40px);
+    }
   }
 }
 
 .registration__input {
-  padding-left: 28px;
+  padding-left: 10px;
 
   padding-top: 15px;
   padding-bottom: 15px;
@@ -126,7 +128,7 @@
   @include mq(desktop) {
     padding-top: 23px;
     padding-bottom: 23px;
-    padding-left: 40px;
+
     font-size: 20px;
     line-height: calc(24 / 20);
   }
@@ -141,6 +143,10 @@
   &:hover,
   &:focus {
     outline-color: var(--accent-background);
+  }
+
+  &:not(:placeholder-shown):invalid:not(:focus) {
+    outline-color: #b30f0f;
   }
 }
 
