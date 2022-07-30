@@ -61,6 +61,7 @@
 }
 
 .activity__subtitle {
+  position: relative;
   margin-top: 20px;
   margin-bottom: 42px;
 
@@ -79,6 +80,17 @@
   }
 
   &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%, -50%);
+
+    width: 20px;
+    height: 2px;
+
+    background-color: var(--accent-background);
   }
 
   .activity__item:hover & {

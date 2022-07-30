@@ -1,6 +1,3 @@
-.reviews {
-}
-
 .reviews__title {
   margin-bottom: 25px;
 
@@ -58,9 +55,6 @@
   @include mq(desktop) {
     gap: 18px;
   }
-}
-
-.reviews-card__link {
 }
 
 .reviews-card__content {
@@ -127,15 +121,9 @@
   }
 }
 
-.reviews-card--text {
+.reviews-card__link {
   line-height: 1.6;
   text-decoration-line: underline;
 
   color: #ff6b09;
-}
-
-.reviews__list {
-}
-
-.reviews__item {
 }
