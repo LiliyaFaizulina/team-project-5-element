@@ -1,0 +1,128 @@
+.benefits {
+    position: relative;
+    max-width: 480px;
+    background: transparent;
+
+    @include mq(tablet) {
+        max-width: 768px;
+    }
+
+    @include mq(desktop) {
+        max-width: 1660px;
+    }
+}
+
+// .benefits__container {
+
+
+//     // position: absolute;
+//     // top: -480px;
+//     // top: 0;
+//     // // left: 20px;
+//     // left: 50%;
+//     // transform: translatex(-50%);
+
+//     // @include mq(mobile) {
+//     //     top: -308px;
+//     // }
+
+//     // @include mq(tablet) {
+//     //     top: -199px;
+//     // }
+
+//     // @include mq(desktop) {
+//     //     top: 194px;
+//     // }
+
+// }
+
+.benefits__title {
+    width: 180px;
+    display: inline-block;
+
+    font-size: 20px;
+    line-height: 1.36;
+    text-align: left;
+
+    @include mq(tablet) {
+        width: 100%;
+        text-align: center;
+    }
+
+    @include mq(desktop) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+
+.benefits__list {
+    margin-top: 25px;
+    padding: 20px 27px;
+    max-width: 440px;
+
+    background: var(--prime-background);
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px 98px;
+        margin-top: 30px;
+        max-width: 688px;
+    }
+
+    @include mq(desktop) {
+        justify-content: space-between;
+        padding: 67px 113px;
+        margin-top: 68px;
+        max-width: 1314px;
+    }
+}
+
+.benefits__item {
+    margin-bottom: 15px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.71;
+    align-items: center;
+    letter-spacing: 0.08em;
+
+    color: var(--title-text-color);
+
+    counter-increment: section;
+
+    @include mq(tablet) {
+        width: calc((100% - 68px) / 2);
+    }
+
+    @include mq(desktop) {
+        width: calc((100% - 80px) / 3);
+    }
+}
+
+.benefits__text {
+    @include mq(desktop) {
+        padding-right: 30px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+
+    &::before {
+        content: "\2015  0" counter(section);
+        display: block;
+        margin-bottom: 5px;
+        line-height: 1.2;
+        color: var(--accent-text-color);
+    }
+}
