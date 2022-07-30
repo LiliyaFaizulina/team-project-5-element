@@ -91,6 +91,10 @@
     height: 2px;
 
     background-color: var(--accent-background);
+
+    .activity__item:hover & {
+      background-color: var(--prime-background);
+    }
   }
 
   .activity__item:hover & {
