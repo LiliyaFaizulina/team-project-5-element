@@ -1,12 +1,14 @@
 .problems {
-    max-width: 100%;
+    max-width: 480px;
     height: 695px;
+
     background-image: linear-gradient(to bottom,
             var(--black-background) 545px,
             var(--prime-background) 545px,
             var(--prime-background) 695px);
 
     @include mq(tablet) {
+        max-width: 768px;
         height: 481px;
         background-image: linear-gradient(to bottom,
                 var(--black-background) 340px,
@@ -15,14 +17,16 @@
     }
 
     @include mq(desktop) {
+        max-width: 1680px;
+        margin-left: auto;
+        margin-right: auto;
         height: 710px;
         background-image: url('../images/campfire.svg'), linear-gradient(to bottom,
                 var(--black-background) 560px,
                 var(--prime-background) 560px,
                 var(--prime-background) 710px);
-        background-position: right;
+        background-position: 100% 37%;
         background-repeat: no-repeat;
-
     }
 }
 
@@ -98,17 +102,17 @@
 .problems__text {
     padding-right: 20px;
     font-size: 14px;
-    line-height: 1.71;
+    line-height: calc(24 / 14);
     letter-spacing: 0.08em;
 
     @include mq(tablet) {
         padding-right: 30px;
-        line-height: cal(20 / 14);
+        line-height: calc(20 / 14);
     }
 
     @include mq(desktop) {
         font-size: 20px;
-        line-height: 1.4;
+        line-height: calc(28 / 20);
     }
 
 
@@ -116,7 +120,7 @@
         content: "\2015  0" counter(section);
         display: block;
         margin-bottom: 5px;
-        line-height: 1.2;
+        line-height: 1.22;
         color: var(--accent-text-color);
     }
 }
