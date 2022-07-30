@@ -1,0 +1,141 @@
+.reviews {
+}
+
+.reviews__title {
+  margin-bottom: 25px;
+
+  @include mq(tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(tablet) {
+    max-width: 688px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+    padding: 40px 40px;
+
+    background: #ffffff;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  }
+
+  @include mq(desktop) {
+    max-width: 1090px;
+    padding: 50px 112px 82px;
+    gap: 40px;
+  }
+}
+
+.reviews-card__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+
+  margin-bottom: 22px;
+
+  @include mq(tablet) {
+    gap: 15px;
+    margin-bottom: 0;
+  }
+
+  @include mq(desktop) {
+    gap: 18px;
+  }
+}
+
+.reviews-card__link {
+}
+
+.reviews-card__content {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(tablet) {
+    max-width: 412px;
+    text-align: left;
+  }
+
+  @include mq(desktop) {
+    max-width: 706px;
+  }
+}
+
+.reviews-card__subtitle {
+  margin-bottom: 20px;
+
+  font-weight: 800;
+  line-height: 1.2;
+
+  color: var(--accent-text-color);
+
+  @include mq(tablet) {
+    font-size: 20px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+  }
+}
+
+.reviews-card__discription {
+  margin-bottom: 16px;
+
+  font-size: 12px;
+  line-height: 1.25;
+
+  @include mq(tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include mq(desktop) {
+    max-width: 484px;
+    margin-bottom: 18px;
+
+    font-size: 14px;
+  }
+}
+
+.reviews-card__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.6;
+
+  color: var(--secondary-text-color);
+
+  @include mq(desktop) {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+.reviews-card--text {
+  line-height: 1.6;
+  text-decoration-line: underline;
+
+  color: #ff6b09;
+}
+
+.reviews__list {
+}
+
+.reviews__item {
+}
