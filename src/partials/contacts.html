@@ -13,7 +13,7 @@
       A consultant will contact you and answer your questions
     </p>
     <form class="contacts__form registration" name="registration">
-      <label class="registration__field" name="client_name">
+      <label class="registration__field">
         <input
           class="registration__input"
           name="client_name"
@@ -26,13 +26,15 @@
         />
         <span class="registration__label">Name*</span>
       </label>
-      <label class="registration__field" name="client_name">
+      <label class="registration__field">
         <input
           class="registration__input"
           name="client_telephone"
           type="tel"
           required
           placeholder=" "
+          pattern="[0-9]{9}"
+          title="Telephone number must be 9 digits"
         />
         <span class="registration__label">Phone*</span>
       </label>
