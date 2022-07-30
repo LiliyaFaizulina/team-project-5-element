@@ -1,8 +1,5 @@
 .reviews__container {
   position: relative;
-  @include mq(desktop) {
-    width: 1258px;
-  }
 }
 
 .reviews__vector--left {
@@ -17,7 +14,7 @@
   }
 
   @include mq(desktop) {
-    transform: translate(0, 0);
+    transform: translate(150%, 150%);
   }
 }
 
@@ -33,7 +30,7 @@
   }
 
   @include mq(desktop) {
-    transform: translate(0, 0);
+    transform: translate(-150%, 150%);
   }
 }
 
@@ -74,7 +71,7 @@
 
   @include mq(desktop) {
     max-width: 1090px;
-    padding: 50px 112px 50 82px;
+    padding: 50px 112px 50px 82px;
     gap: 40px;
   }
 }
