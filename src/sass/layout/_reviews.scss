@@ -10,11 +10,11 @@
   @include mq(tablet) {
     bottom: 50%;
     left: 0;
-    transform: translate(25%, 25%);
+    transform: translate(25%, 0);
   }
 
   @include mq(desktop) {
-    transform: translate(150%, 150%);
+    transform: translate(150%, 0);
   }
 }
 
@@ -26,11 +26,11 @@
   @include mq(tablet) {
     bottom: 50%;
     right: 0;
-    transform: translate(-25%, 25%);
+    transform: translate(-25%, 0);
   }
 
   @include mq(desktop) {
-    transform: translate(-150%, 150%);
+    transform: translate(-150%, 0);
   }
 }
 
