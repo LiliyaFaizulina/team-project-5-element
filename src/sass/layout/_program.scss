@@ -53,13 +53,13 @@
   @include mq(desktop) {
     width: 1680px;
     padding-top: 120px;
-    padding-bottom: 326px;
+    padding-bottom: 65px;
 
     &::after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: 14px;
+      top: 661px;
 
       display: block;
       width: 672px;
