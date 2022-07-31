@@ -1,15 +1,20 @@
 .problems {
-    max-width: 480px;
-    height: 695px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 70px;
 
     background-image: linear-gradient(to bottom,
             var(--black-background) 545px,
             var(--prime-background) 545px,
             var(--prime-background) 695px);
 
+    @include mq(mobile-only) {
+        max-width: 480px;
+    }
+
     @include mq(tablet) {
-        max-width: 768px;
-        height: 481px;
+        width: 768px;
+
         background-image: linear-gradient(to bottom,
                 var(--black-background) 340px,
                 var(--prime-background) 340px,
@@ -17,10 +22,10 @@
     }
 
     @include mq(desktop) {
-        max-width: 1680px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 710px;
+        padding-bottom: 130px;
+
+        width: 1680px;
+
         background-image: url('../images/campfire.svg'), linear-gradient(to bottom,
                 var(--black-background) 560px,
                 var(--prime-background) 560px,
@@ -32,22 +37,22 @@
 
 .problems__title {
     padding-top: 25px;
-    padding-right: 10px;
 
     text-align: left;
     font-size: 24px;
     line-height: 1.3;
 
     @include mq(tablet) {
-        width: 450px;
         padding-top: 55px;
-        padding-right: 30px;
+
+        width: 450px;
     }
 
     @include mq(desktop) {
-        width: 805px;
         padding-top: 100px;
-        padding-right: 30px;
+
+        width: 810px;
+
         font-size: 46px;
     }
 }
@@ -55,8 +60,8 @@
 .problems__list {
     margin-top: 25px;
     padding: 20px 27px;
+
     max-width: 440px;
-    height: 490px;
 
     background: var(--prime-background);
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
@@ -68,21 +73,24 @@
         padding: 28px 90px;
         margin-top: 30px;
         max-width: 688px;
+        // height: 303px;
     }
 
     @include mq(desktop) {
-        padding: 67px 113px;
         margin-top: 68px;
+        padding: 67px 113px;
+
         max-width: 1314px;
+        height: 362px;
     }
 }
 
 .problems__item {
     margin-bottom: 15px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.71;
-
     align-items: center;
     letter-spacing: 0.08em;
 
@@ -100,13 +108,10 @@
 }
 
 .problems__text {
-    padding-right: 20px;
     font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.08em;
+    line-height: calc(20 / 14);
 
     @include mq(tablet) {
-        padding-right: 30px;
         line-height: calc(20 / 14);
     }
 
@@ -120,7 +125,15 @@
         content: "\2015  0" counter(section);
         display: block;
         margin-bottom: 5px;
-        line-height: 1.22;
+
+        font-size: 20px;
+        line-height: calc(24 / 20);
+
         color: var(--accent-text-color);
+
+        @include mq(desktop) {
+            font-size: 20px;
+            line-height: calc(33 / 20);
+        }
     }
 }
