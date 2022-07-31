@@ -1,46 +1,51 @@
 .benefits {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 70px;
-
-    background-image: linear-gradient(to bottom,
-            var(--black-background) 550px,
-            var(--prime-background) 550px,
-            var(--prime-background) 788px);
+    position: relative;
+    max-width: 480px;
+    background: transparent;
 
     @include mq(tablet) {
-        padding-top: 172px;
-        background-image: linear-gradient(to bottom,
-                var(--black-background) 371px,
-                var(--prime-background) 371px,
-                var(--prime-background) 596px);
+        max-width: 768px;
     }
 
     @include mq(desktop) {
-        padding-top: 65px;
-        max-width: 1680px;
-        background-image: linear-gradient(to bottom,
-                var(--black-background) 261px,
-                var(--prime-background) 261px,
-                var(--prime-background) 455px);
+        max-width: 1660px;
     }
 }
+
+// .benefits__container {
+
+
+//     // position: absolute;
+//     // top: -480px;
+//     // top: 0;
+//     // // left: 20px;
+//     // left: 50%;
+//     // transform: translatex(-50%);
+
+//     // @include mq(mobile) {
+//     //     top: -308px;
+//     // }
+
+//     // @include mq(tablet) {
+//     //     top: -199px;
+//     // }
+
+//     // @include mq(desktop) {
+//     //     top: 194px;
+//     // }
+
+// }
 
 .benefits__title {
     width: 180px;
     display: inline-block;
 
     font-size: 20px;
-    line-height: calc(27 / 20);
+    line-height: 1.36;
     text-align: left;
 
-    @include mq(mobile) {
-        width: 100%;
-    }
-
     @include mq(tablet) {
-        font-size: 26px;
-        line-height: calc(34 / 26);
+        width: 100%;
         text-align: center;
     }
 
@@ -59,8 +64,8 @@
 }
 
 .benefits__list {
-    margin-top: 30px;
-    padding: 35px 22px;
+    margin-top: 25px;
+    padding: 20px 27px;
     max-width: 440px;
 
     background: var(--prime-background);
@@ -70,17 +75,15 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 20px;
         padding: 40px 98px;
         margin-top: 30px;
         max-width: 688px;
     }
 
     @include mq(desktop) {
-        position: relative;
-        z-index: 10;
+        justify-content: space-between;
         padding: 67px 113px;
-        margin-top: 0;
+        margin-top: 68px;
         max-width: 1314px;
     }
 }
@@ -90,7 +93,7 @@
 
     font-weight: 700;
     font-size: 14px;
-    line-height: calc(20 / 14);
+    line-height: 1.71;
     align-items: center;
     letter-spacing: 0.08em;
 
@@ -99,8 +102,7 @@
     counter-increment: section;
 
     @include mq(tablet) {
-        width: calc((100% - 20px) / 2);
-        line-height: calc(24 / 14);
+        width: calc((100% - 68px) / 2);
     }
 
     @include mq(desktop) {
@@ -109,16 +111,10 @@
 }
 
 .benefits__text {
-    font-size: 14px;
-    line-height: calc(20 / 14);
-
-    @include mq(tablet) {
-        line-height: calc(24 / 14);
-    }
-
     @include mq(desktop) {
+        padding-right: 30px;
         font-size: 20px;
-        line-height: calc(28 / 20);
+        line-height: 1.4;
     }
 
 
@@ -126,15 +122,7 @@
         content: "\2015  0" counter(section);
         display: block;
         margin-bottom: 5px;
-
-        font-size: 14px;
-        line-height: calc(23 / 14);
-
+        line-height: 1.2;
         color: var(--accent-text-color);
-
-        @include mq(desktop) {
-            font-size: 20px;
-            line-height: calc(33 / 20);
-        }
     }
 }

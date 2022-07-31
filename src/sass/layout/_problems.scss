@@ -1,7 +1,6 @@
 .problems {
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 695px;
+    max-width: 480px;
+    height: 695px;
 
     background-image: linear-gradient(to bottom,
             var(--black-background) 545px,
@@ -9,6 +8,8 @@
             var(--prime-background) 695px);
 
     @include mq(tablet) {
+        max-width: 768px;
+        height: 481px;
         background-image: linear-gradient(to bottom,
                 var(--black-background) 340px,
                 var(--prime-background) 340px,
@@ -17,7 +18,9 @@
 
     @include mq(desktop) {
         max-width: 1680px;
-        // height: 710px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 710px;
         background-image: url('../images/campfire.svg'), linear-gradient(to bottom,
                 var(--black-background) 560px,
                 var(--prime-background) 560px,
@@ -29,6 +32,7 @@
 
 .problems__title {
     padding-top: 25px;
+    padding-right: 10px;
 
     text-align: left;
     font-size: 24px;
@@ -37,11 +41,13 @@
     @include mq(tablet) {
         width: 450px;
         padding-top: 55px;
+        padding-right: 30px;
     }
 
     @include mq(desktop) {
-        width: 810px;
+        width: 805px;
         padding-top: 100px;
+        padding-right: 30px;
         font-size: 46px;
     }
 }
@@ -50,6 +56,7 @@
     margin-top: 25px;
     padding: 20px 27px;
     max-width: 440px;
+    height: 490px;
 
     background: var(--prime-background);
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
@@ -61,14 +68,12 @@
         padding: 28px 90px;
         margin-top: 30px;
         max-width: 688px;
-        // height: 303px;
     }
 
     @include mq(desktop) {
         padding: 67px 113px;
         margin-top: 68px;
         max-width: 1314px;
-        height: 362px;
     }
 }
 
@@ -95,10 +100,13 @@
 }
 
 .problems__text {
+    padding-right: 20px;
     font-size: 14px;
-    line-height: calc(20 / 14);
+    line-height: calc(24 / 14);
+    letter-spacing: 0.08em;
 
     @include mq(tablet) {
+        padding-right: 30px;
         line-height: calc(20 / 14);
     }
 
@@ -112,15 +120,7 @@
         content: "\2015  0" counter(section);
         display: block;
         margin-bottom: 5px;
-
-        font-size: 20px;
-        line-height: calc(24 / 20);
-
+        line-height: 1.22;
         color: var(--accent-text-color);
-
-        @include mq(desktop) {
-            font-size: 20px;
-            line-height: calc(33 / 20);
-        }
     }
 }
