@@ -1,30 +1,24 @@
 .problems {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 70px;
+    margin-top: -1px;
+    padding-top: 25px;
+    padding-bottom: 35px;
 
     background-image: linear-gradient(to bottom,
-            var(--black-background) 545px,
-            var(--prime-background) 545px,
-            var(--prime-background) 695px);
-
-    @include mq(mobile-only) {
-        max-width: 480px;
-    }
+            var(--black-background) 76%,
+            var(--prime-background) 76%);
 
     @include mq(tablet) {
-        width: 768px;
+        padding-top: 55px;
+        padding-bottom: 30px;
 
         background-image: linear-gradient(to bottom,
                 var(--black-background) 340px,
                 var(--prime-background) 340px,
-                var(--prime-background) 481px);
+                var(--prime-background) 511px);
     }
 
     @include mq(desktop) {
-        padding-bottom: 130px;
-
-        width: 1680px;
+        padding-top: 100px;
 
         background-image: url('../images/campfire.svg'), linear-gradient(to bottom,
                 var(--black-background) 560px,
@@ -36,21 +30,15 @@
 }
 
 .problems__title {
-    padding-top: 25px;
-
     text-align: left;
     font-size: 24px;
     line-height: 1.3;
 
     @include mq(tablet) {
-        padding-top: 55px;
-
         width: 450px;
     }
 
     @include mq(desktop) {
-        padding-top: 100px;
-
         width: 810px;
 
         font-size: 46px;
@@ -70,33 +58,41 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 28px 90px;
+        gap: 20px;
+
         margin-top: 30px;
+        padding: 28px 90px;
+
         max-width: 688px;
-        // height: 303px;
     }
 
     @include mq(desktop) {
+        gap: 30px;
+
         margin-top: 68px;
         padding: 67px 113px;
 
         max-width: 1314px;
         height: 362px;
+
     }
 }
 
 .problems__item {
-    margin-bottom: 15px;
-
     font-weight: 700;
     font-size: 14px;
     line-height: 1.71;
     align-items: center;
-    letter-spacing: 0.08em;
 
     color: var(--title-text-color);
 
     counter-increment: section;
+
+    @include mq(mobile-only) {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
 
     @include mq(tablet) {
         width: calc((100% - 68px) / 2);
@@ -124,6 +120,7 @@
     &::before {
         content: "\2015  0" counter(section);
         display: block;
+
         margin-bottom: 5px;
 
         font-size: 20px;
@@ -132,6 +129,8 @@
         color: var(--accent-text-color);
 
         @include mq(desktop) {
+            margin-bottom: 10px;
+
             font-size: 20px;
             line-height: calc(33 / 20);
         }

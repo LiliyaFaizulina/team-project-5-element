@@ -15,28 +15,34 @@
     <form class="contacts__form registration" name="registration">
       <label class="registration__field">
         <input
-          class="registration__input"
+          class="registration__input name"
           name="client_name"
           type="text"
           required
           minlength="5"
           pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
           title="Username must be two words separated by space."
-          placeholder=" "
+          placeholder="John Smith"
         />
         <span class="registration__label">Name*</span>
+        <svg class="registration__icon" width="25" height="25">
+          <use href="./images/icon-svg/icons.svg#icon-close-menu"></use>
+        </svg>
       </label>
       <label class="registration__field">
         <input
-          class="registration__input"
+          class="registration__input phone"
           name="client_telephone"
           type="tel"
           required
-          placeholder=" "
-          pattern="[0-9]{9}"
-          title="Telephone number must be 9 digits"
+          placeholder="0999999999"
+          pattern="[0-9]{10}"
+          title="Telephone number must be 10 digits"
         />
         <span class="registration__label">Phone*</span>
+        <svg class="registration__icon" width="25" height="25">
+          <use href="./images/icon-svg/icons.svg#icon-close-menu"></use>
+        </svg>
       </label>
       <button class="btn registration__btn" type="submit">
         I want a free lesson
