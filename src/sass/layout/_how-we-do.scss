@@ -15,6 +15,7 @@
   margin-bottom: 30px;
 
   @include mq(desktop) {
+    margin-bottom: 47px;
     text-align: left;
   }
 }
@@ -75,7 +76,6 @@
   margin-bottom: 42px;
 
   line-height: 1.4;
-  letter-spacing: 0.08em;
 
   color: var(--title-text-color);
 
@@ -113,7 +113,6 @@
 
 .activity__text {
   line-height: 1.6;
-  letter-spacing: 0.08em;
 
   color: var(--prime-text-color);
 
