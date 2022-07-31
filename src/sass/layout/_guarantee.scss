@@ -84,11 +84,11 @@
   }
 }
 
-.guarantee__bg {
-  display: flex;
-}
-
 .guarantee__icon {
+  width: 15px;
+  height: 20px;
+
+  flex-shrink: 0;
   @include mq(desktop) {
     width: 22px;
     height: 30px;
