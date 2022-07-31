@@ -4,7 +4,7 @@
     position: relative;
     padding-top: 60px;
     padding-bottom: 35px;
-    max-width: 480px;
+    
     overflow: hidden;
 
     /*background-image: url(../images/hero/wave-bg.svg);
@@ -12,14 +12,6 @@
     background-size: 768px 500px;
     filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
     background-position: left 10 top 10;*/
-
-    @include mq(tablet) {
-        width: 768px;
-    }
-
-    @include mq(desktop) {
-        width: 1680px;
-    }
 }
 .hero__container {
     display: flex;
