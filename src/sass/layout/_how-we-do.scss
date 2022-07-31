@@ -1,5 +1,16 @@
 .activity {
-  max-width: 100%;
+  padding-top: 35px;
+  padding-bottom: 40px;
+
+  @include mq(tablet) {
+    padding-top: 29px;
+    padding-bottom: 70px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 100px;
+    padding-bottom: 130px;
+  }
 }
 
 .activity__title {

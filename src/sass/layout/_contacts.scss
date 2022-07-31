@@ -1,12 +1,6 @@
 .contacts {
-  margin-right: auto;
-  margin-left: auto;
   padding-top: 55px;
   padding-bottom: 55px;
-
-  @include mq(mobile-only) {
-    max-width: 480px;
-  }
 
   min-height: 507px;
   background-color: var(--black-background);
@@ -22,7 +16,7 @@
   @include mq(tablet) {
     padding-top: 60px;
     padding-bottom: 68px;
-    width: 768px;
+
     height: 520px;
   }
 
@@ -30,7 +24,6 @@
     padding-top: 100px;
     padding-bottom: 62px;
 
-    width: 1680px;
     height: 840px;
     background-image: url(../images/contacts/registration-bg-lg.png);
 

@@ -1,3 +1,17 @@
+.reviews {
+  padding-top: 35px;
+  padding-bottom: 61px;
+
+  @include mq(tablet) {
+    padding-bottom: 70px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 95px;
+    padding-bottom: 122px;
+  }
+}
+
 .reviews__container {
   position: relative;
 }
