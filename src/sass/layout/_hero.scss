@@ -5,6 +5,7 @@
     padding-top: 60px;
     padding-bottom: 35px;
     max-width: 480px;
+    overflow: hidden;
 
     /*background-image: url(../images/hero/wave-bg.svg);
     background-repeat: no-repeat;
@@ -13,12 +14,16 @@
     background-position: left 10 top 10;*/
 
     @include mq(tablet) {
-        max-width: 768px;
+        width: 768px;
     }
 
     @include mq(desktop) {
-        max-width: 1680px;
+        width: 1680px;
     }
+}
+.hero__container {
+    display: flex;
+    flex-direction: column;
 }
 .hero__title {
         margin-bottom: 8px;
@@ -48,7 +53,6 @@
     color: var(--accent-text-color);
 }
 .lesson-btn {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     height: 48px;
@@ -66,7 +70,7 @@
     filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
 
     @media screen and (min-width: 480px) {
-        left: 0;
+        left: -35px;
         top: 0;
         transform: translate(0, 0);        
     }
