@@ -1,20 +1,21 @@
 .footer {
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   padding-bottom: 20px;
 
-  @include mq(mobile-only) {
-    max-width: 480px;
-    padding-top: 24px;
+  // @include mq(mobile-only) {
+  // max-width: 480px;
+  padding-top: 24px;
 
-    background-image: linear-gradient(
-      to bottom,
-      var(--prime-background) 74.046%,
-      var(--black-background) 74.046%
-    );
-  }
+  background-image: linear-gradient(
+    to bottom,
+    var(--prime-background) 74.046%,
+    var(--black-background) 74.046%
+  );
+  // }
 
-  @include mq(tablet-only) {
+  // @include mq(tablet-only) {
+  @include mq(tablet) {
     padding-top: 50px;
 
     background-image: linear-gradient(
@@ -25,7 +26,7 @@
   }
 
   @include mq(desktop) {
-    width: 1680px;
+    // width: 1680px;
     padding-top: 52px;
 
     background-image: linear-gradient(
@@ -90,7 +91,7 @@
   }
 
   @include mq(tablet) {
-    font-weight: 600;
+    // font-weight: 600;
     font-size: 20px;
     line-height: calc(24 / 20);
 
@@ -106,7 +107,7 @@
   }
 
   @include mq(desktop) {
-    font-weight: 600;
+    // font-weight: 600;
     font-size: 30px;
     line-height: calc(37 / 30);
 
@@ -121,7 +122,7 @@
   display: inline-block;
   margin-right: 10px;
 
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     width: 24px;
     height: 24px;
     margin-right: 20px;
