@@ -7,6 +7,8 @@
   background-color: var(--black-background);
 
   @include mq(mobile-only) {
+    max-width: 480px;
+
     &::after {
       content: '';
       position: absolute;
@@ -29,6 +31,8 @@
   }
 
   @include mq(tablet-only) {
+    max-width: 768px;
+
     &::after {
       content: '';
       position: absolute;
@@ -78,7 +82,6 @@
 }
 
 .program__title {
-  text-align: left;
   color: var(--light-text-color);
 
   @include mq(mobile-only) {
@@ -90,6 +93,7 @@
   }
 
   @include mq(desktop) {
+    text-align: left;
     margin-bottom: 106px;
   }
 }

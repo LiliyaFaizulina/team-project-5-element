@@ -4,10 +4,14 @@
   padding-top: 55px;
   padding-bottom: 55px;
 
-  max-width: 480px;
+  @include mq(mobile-only) {
+    max-width: 480px;
+  }
+
   min-height: 507px;
   background-color: var(--black-background);
   background-image: url(../images/contacts/registration-bg-md.png);
+
   @include mq(retina) {
     background-image: url(../images/contacts/registration-bg-md@2x.png);
   }
@@ -18,7 +22,7 @@
   @include mq(tablet) {
     padding-top: 60px;
     padding-bottom: 68px;
-    max-width: 768px;
+    width: 768px;
     height: 520px;
   }
 
@@ -26,9 +30,10 @@
     padding-top: 100px;
     padding-bottom: 62px;
 
-    max-width: 1680px;
+    width: 1680px;
     height: 840px;
     background-image: url(../images/contacts/registration-bg-lg.png);
+
     @include mq(retina) {
       background-image: url(../images/contacts/registration-bg-lg@2x.png);
     }
@@ -39,6 +44,7 @@
 
 .contacts__title {
   margin-bottom: 25px;
+
   @include mq(mobile-only) {
     font-size: 14px;
   }
@@ -108,12 +114,14 @@
     top: 23px;
     left: 40px;
   }
+  transform: translate(0);
   transition: transform var(--animation), color var(--animation);
 
   .registration__input:not(:placeholder-shown) ~ &,
   .registration__input:focus ~ & {
     transform: translateY(-200%) translateX(-28px);
     color: var(--accent-text-color);
+
     @include mq(desktop) {
       transform: translateY(-200%) translateX(-40px);
     }
