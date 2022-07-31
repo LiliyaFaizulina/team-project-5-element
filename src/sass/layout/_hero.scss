@@ -11,11 +11,20 @@
         display: flex;
     }
 
-    /*background-image: url(../images/hero/wave-bg.svg);
+    background-image: url(../images/hero/wave-bg-1680-975.png);
     background-repeat: no-repeat;
     background-size: 768px 500px;
+    background-position: 0px -20px;
+    
     filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
-    background-position: left 10 top 10;*/
+    /*background-position: left 10 top 10;*/
+        @include mq(tablet) {
+            background-position: 0px -65px;
+        }
+        @include mq(desktop) {
+            background-size: 1680px 878px;
+            padding-left: 40px;
+        }
 }
 .hero__container {
     display: flex;
@@ -84,15 +93,14 @@
 }
 .wave-bg {
     display: block;
-    min-width: 320px;
-    width: 150%;
+    /*min-width: 320px;*/
+    min-width: 100%;
     position: absolute;
-    left: 40%;
-    top: 45%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    /*transform: translateX(-10%);*/
-
+    
     filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
 
     &--desk {
@@ -104,9 +112,8 @@
         top: 0;
         transform: translate(0, 0); */       
     }
-    @include mq(tablet) {
-        left: 0;
-        
+    @include mq(desktop) {
+                
         &--desk {
             display: block;
         }
