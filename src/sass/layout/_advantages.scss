@@ -1,6 +1,10 @@
 .advantages {
     padding-top: 35px;
     padding-bottom: 70px;
+
+    @include mq(desktop) {
+        padding-bottom: 130px;
+    }
 }
 .advantages__list {
     display: flex;
@@ -66,6 +70,7 @@
 .advantages__item {
     display: flex;
     align-items: center;
+    width: 220px;
        
     font-weight: 700;
     font-size: 14px;
@@ -73,7 +78,11 @@
     
     color: var(--title-text-color);
 
+    @include mq(tablet) {
+        width: 214px;
+    }
     @include mq(desktop) {
+            width: 417px;
             font-size: 20px;
         }
 }
