@@ -1,17 +1,13 @@
 header {
     /*width: 100vw;*/
+    height: 90px;
     padding-bottom: 80px;
     margin-left: auto;
     margin-right: auto;
 
-    /*@include mq(tablet) {
-        max-width: 768px;
-        width: 768px;
+    @include mq(tablet) {
+        height: 110px;
     }
-        @include mq(desktop) {
-            max-width: 1366px;
-            width: 1366px;
-        }*/
     }
 .header {
     position: fixed;
@@ -25,7 +21,7 @@ header {
     
     padding-top: 30px;
     background-color: var(--prime-background);
-    z-index: 2;
+    z-index: 11;
 
     @media screen and (min-width: 480px) {
         
@@ -33,11 +29,13 @@ header {
         /*transform: translateX(-50%); */       
     }
     @include mq(tablet) {
+        width: 768;
         padding-left: 40px;
         padding-right: 40px;
         
     }
         @include mq(desktop) {
+            width: 1314px;
             padding-left: 25px;
             padding-right: 25px;
         }
@@ -51,9 +49,7 @@ header {
                 display: none;
             }
     }
-.container-nav {
-    display: none;
-}
+
 .menu-btn {
     /*position: relative;*/
     position: absolute;
@@ -184,6 +180,15 @@ header {
         top: 0;
         transform: translateY(50%);
     }
+        @include mq(desktop) {
+            display: inline-flex;
+            position: absolute;
+            right: 25px;
+            top: -22px;
+            transform: translateY(50%);
+            width: 336px;
+            height: 70px;
+        }
 }
 
 body.no-scroll {
