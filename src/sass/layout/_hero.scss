@@ -1,7 +1,7 @@
 .hero {
     margin-right: auto;
     margin-left: auto;
-    /*position: relative;*/
+    position: relative;
     padding-top: 60px;
     padding-bottom: 35px;
     
@@ -20,10 +20,15 @@
 .hero__container {
     display: flex;
     flex-direction: column;
-    position: relative;
+    /*position: relative;*/
     width: 320px;
 
+    @include mq(tablet) {
+            
+            
+        }
     @include mq(desktop) {
+      
         width: 530px;
     }
 }
@@ -41,6 +46,9 @@
         @include mq(tablet) {
             font-size: 26px;
         }
+                @include mq(desktop) {
+                    font-size: 58px;
+                }
 }
 .hero__warning,
 .hero__benefit,
@@ -54,19 +62,28 @@
         }
 }
 .hero__benefit {
+    margin-bottom: 50px;
     font-weight: 700;
     color: var(--title-text-color);
 }
 .hero__points {
-    margin-bottom: 50px;
-
     font-weight: 700;
     color: var(--accent-text-color);
+    
+    @include mq(desktop) {
+        color: var(--title-text-color);
+        }
 }
 .lesson-btn {
     height: 48px;
+
+    @include mq(desktop) {
+        width: 354px;
+        height: 70px;
+    }
 }
 .wave-bg {
+    display: block;
     min-width: 320px;
     width: 150%;
     position: absolute;
@@ -78,17 +95,32 @@
 
     filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
 
+    &--desk {
+        display: none;
+    }
+
     @media screen and (min-width: 480px) {
-        left: -35px;
+        /*left: -35px;
         top: 0;
-        transform: translate(0, 0);        
+        transform: translate(0, 0); */       
     }
     @include mq(tablet) {
         left: 0;
+        
+        &--desk {
+            display: block;
+        }
+        &--mob {
+            display: none;
+        }
     }
 }
 .hero__img {
     margin-top: 54px;
     margin-left: auto;
     margin-right: auto;
+
+    @include mq(tablet) {
+        margin: 0;
+    }
 }
