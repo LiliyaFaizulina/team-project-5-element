@@ -108,6 +108,7 @@
     top: 23px;
     left: 40px;
   }
+  transform: translate(0);
   transition: transform var(--animation), color var(--animation);
 
   .registration__input:not(:placeholder-shown) ~ &,
