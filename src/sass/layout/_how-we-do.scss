@@ -22,6 +22,7 @@
 
 .activity__list {
   display: flex;
+
   text-align: center;
   flex-wrap: wrap;
   gap: 15px;
@@ -36,32 +37,43 @@
 }
 
 .activity__item {
-  padding: 30px 20px;
-
   flex-basis: calc((100% - 0px) / 1);
 
   background-color: var(--prime-background);
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
   @include mq(tablet) {
-    padding: 35px 32px;
     flex-basis: calc((100% - 20px) / 2);
   }
 
   @include mq(desktop) {
-    padding: 35px 28px;
     flex-basis: calc((100% - 60px) / 3);
   }
 
-  &:hover {
+  .activity__link:hover &,
+  .activity__link:focus & {
     background-color: var(--accent-background);
   }
 }
 
 .activity__link {
+  padding: 30px 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
   color: var(--accent-background);
 
-  .activity__item:hover & {
+  @include mq(tablet) {
+    padding: 35px 32px;
+  }
+
+  @include mq(desktop) {
+    padding: 35px 28px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-background);
     color: var(--light-text-color);
   }
 }
@@ -101,13 +113,11 @@
 
     background-color: var(--accent-background);
 
-    .activity__item:hover & {
+    .activity__link:hover &,
+    .activity__link:focus & {
       background-color: var(--prime-background);
+      color: var(--light-text-color);
     }
-  }
-
-  .activity__item:hover & {
-    color: var(--light-text-color);
   }
 }
 
@@ -120,7 +130,8 @@
     font-size: 18px;
   }
 
-  .activity__item:hover & {
+  .activity__link:hover &,
+  .activity__link:focus & {
     color: var(--light-text-color);
   }
 }
