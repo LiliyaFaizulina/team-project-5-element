@@ -1,39 +1,28 @@
 .benefits {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    margin-top: -1px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 
     background-image: linear-gradient(to bottom,
-            var(--black-background) 550px,
-            var(--prime-background) 550px,
-            var(--prime-background) 788px);
-
-    @include mq(mobile-only) {
-        max-width: 480px;
-    }
+            var(--black-background) 60%,
+            var(--prime-background) 60%);
 
     @include mq(tablet) {
-        padding-top: 172px;
-
-        width: 768px;
 
         background-image: linear-gradient(to bottom,
-                var(--black-background) 371px,
-                var(--prime-background) 371px,
-                var(--prime-background) 596px);
+                var(--black-background) 235px,
+                var(--prime-background) 235px,
+                var(--prime-background) 505px);
     }
 
     @include mq(desktop) {
-        padding-top: 65px;
-        padding-bottom: 130px;
-
-        width: 1680px;
+        padding-top: 35px;
+        padding-bottom: 35px;
 
         background-image: linear-gradient(to bottom,
-                var(--black-background) 261px,
-                var(--prime-background) 261px,
-                var(--prime-background) 455px);
+                var(--black-background) 231px,
+                var(--prime-background) 231px,
+                var(--prime-background) 460px);
     }
 }
 
@@ -83,33 +72,39 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 20px;
-        padding: 40px 98px;
+
         margin-top: 30px;
+        padding: 40px 98px;
+
         max-width: 688px;
     }
 
     @include mq(desktop) {
         position: relative;
-        z-index: 10;
+        z-index: 5;
+        gap: 40px;
 
-        padding: 67px 113px;
         margin-top: 0;
         max-width: 1314px;
+        padding: 67px 113px;
     }
 }
 
 .benefits__item {
-    margin-bottom: 15px;
-
     font-weight: 700;
     font-size: 14px;
     line-height: calc(20 / 14);
     align-items: center;
-    letter-spacing: 0.08em;
 
     color: var(--title-text-color);
 
     counter-increment: section;
+
+    @include mq(mobile-only) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 
     @include mq(tablet) {
         width: calc((100% - 20px) / 2);
@@ -138,7 +133,7 @@
     &::before {
         content: "\2015  0" counter(section);
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
 
         font-size: 14px;
         line-height: calc(23 / 14);
