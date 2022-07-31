@@ -15,5 +15,7 @@
   });
 })();
 
+import './js/jquery';
+import './js/script';
 
 
