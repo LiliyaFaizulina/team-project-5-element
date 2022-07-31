@@ -99,18 +99,18 @@ body {
   }
 }
 
-.how-we-do {
-  padding-top: 35px;
-  padding-bottom: 40px;
-  @include mq(tablet) {
-    padding-top: 40px;
-    padding-bottom: 70px;
-  }
-  @include mq(desktop) {
-    padding-top: 100px;
-    padding-bottom: 130px;
-  }
-}
+// .how-we-do {
+//   padding-top: 35px;
+//   padding-bottom: 40px;
+//   @include mq(tablet) {
+//     padding-top: 40px;
+//     padding-bottom: 70px;
+//   }
+//   @include mq(desktop) {
+//     padding-top: 100px;
+//     padding-bottom: 130px;
+//   }
+// }
 
 .program {
   padding-top: 50px;
