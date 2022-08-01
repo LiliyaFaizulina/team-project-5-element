@@ -1,11 +1,6 @@
 .footer {
-  // margin-left: auto;
-  // margin-right: auto;
-  padding-bottom: 20px;
-
-  // @include mq(mobile-only) {
-  // max-width: 480px;
   padding-top: 24px;
+  padding-bottom: 20px;
 
   background-image: linear-gradient(
     to bottom,
@@ -14,7 +9,6 @@
   );
   // }
 
-  // @include mq(tablet-only) {
   @include mq(tablet) {
     padding-top: 50px;
 
@@ -26,7 +20,6 @@
   }
 
   @include mq(desktop) {
-    // width: 1680px;
     padding-top: 52px;
 
     background-image: linear-gradient(
@@ -38,9 +31,7 @@
 }
 
 .footer__links {
-  @include mq(mobile-only) {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
 
   @include mq(tablet) {
     display: flex;
@@ -70,6 +61,7 @@
 
 .logo__icon {
   display: block;
+
   @include mq(tablet) {
     width: 128px;
     height: 45px;
@@ -86,12 +78,22 @@
   line-height: calc(17 / 14);
   color: var(--title-text-color);
 
+  &:hover .telephone__number,
+  &:focus .telephone__number {
+    transform: scale(1.05);
+    color: var(--accent-text-color);
+  }
+
+  &:hover .telephone__icon,
+  &:focus .telephone__icon {
+    transform: rotate(8deg);
+  }
+
   @include mq(mobile-only) {
     margin-bottom: 28px;
   }
 
   @include mq(tablet) {
-    // font-weight: 600;
     font-size: 20px;
     line-height: calc(24 / 20);
 
@@ -107,7 +109,6 @@
   }
 
   @include mq(desktop) {
-    // font-weight: 600;
     font-size: 30px;
     line-height: calc(37 / 30);
 
@@ -122,6 +123,9 @@
   display: inline-block;
   margin-right: 10px;
 
+  transform: rotate(0);
+  transition: transform var(--animation);
+
   @include mq(tablet) {
     width: 24px;
     height: 24px;
@@ -135,19 +139,31 @@
   }
 }
 
+.telephone__number {
+  transform: scale(1);
+  transition: transform var(--animation), color var(--animation);
+}
+
 .instagram-link {
   display: block;
   width: 40px;
   height: 40px;
 
   background-image: url(../images/footer/instagram.png);
-  // mobile retina screen
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url(../images/footer/instagram@2x.png);
   }
   background-size: contain;
+
+  transform: scale(1);
+  transition: transform var(--animation);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.15);
+  }
 
   @include mq(mobile-only) {
     margin-left: auto;
