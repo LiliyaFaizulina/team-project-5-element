@@ -10,7 +10,7 @@
   border: none;
 
   background-color: var(--accent-background);
-  @include textStyle(var(--light-text-color), 12px, 1.25);
+  @include textStyle(var(--light-text-color), 12px, calc(20 / 12));
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -35,5 +35,14 @@
     @include mq(desktop) {
       min-width: 336px;
     }
+  }
+
+  transform: scale(1);
+
+  transition: transform var(--animation);
+
+  &:focus,
+  &:hover {
+    transform: scale(1.1);
   }
 }

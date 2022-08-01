@@ -50,6 +50,8 @@
     flex-basis: calc((100% - 60px) / 3);
   }
 
+  transition: background-color var(--animation);
+
   .activity__link:hover &,
   .activity__link:focus & {
     background-color: var(--accent-background);
@@ -70,6 +72,7 @@
   @include mq(desktop) {
     padding: 35px 28px;
   }
+  transition: color var(--animation), background-color var(--animation);
 
   &:hover,
   &:focus {
@@ -113,12 +116,15 @@
 
     background-color: var(--accent-background);
 
+    transition: color var(--animation), background-color var(--animation);
     .activity__link:hover &,
     .activity__link:focus & {
       background-color: var(--prime-background);
       color: var(--light-text-color);
     }
   }
+
+  transition: color var(--animation);
 
   .activity__link:hover &,
   .activity__link:focus & {
@@ -135,6 +141,7 @@
     font-size: 18px;
   }
 
+  transition: color var(--animation);
   .activity__link:hover &,
   .activity__link:focus & {
     color: var(--light-text-color);
