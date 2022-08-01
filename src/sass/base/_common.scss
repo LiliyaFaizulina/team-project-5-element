@@ -28,7 +28,9 @@ body {
   }
 
   @include mq(tablet) {
-    width: 728px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 768px;
   }
 
   @include mq(desktop) {
@@ -40,27 +42,27 @@ body {
   margin-right: auto;
   margin-left: auto;
 
-  @include mq(mobile-only) {
-    max-width: 480px;
-  }
+  // @include mq(mobile-only) {
+  //   max-width: 480px;
+  // }
 
-  @include mq(tablet) {
-    width: 768px;
-  }
+  // @include mq(tablet) {
+  //   width: 768px;
+  // }
 
-  @include mq(desktop) {
-    width: 1680px;
-  }
+  // @include mq(desktop) {
+  //   width: 1680px;
+  // }
 }
 
-.header {
-  padding-top: 30px;
-  padding-bottom: 30px;
+// .header {
+//   padding-top: 30px;
+//   padding-bottom: 30px;
 
-  @include mq(tablet-only) {
-    padding-top: 40px;
-  }
-}
+//   @include mq(tablet-only) {
+//     padding-top: 40px;
+//   }
+// }
 
 .hero {
   padding-bottom: 27px;
