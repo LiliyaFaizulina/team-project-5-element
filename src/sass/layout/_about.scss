@@ -1,0 +1,225 @@
+.about {
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  @include mq(desktop) {
+    padding-top: 95px;
+    padding-bottom: 94px;
+  }
+}
+
+.about__title {
+  margin-bottom: 30px;
+
+  text-align: left;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.about__information {
+  @include mq(tablet) {
+    display: flex;
+  }
+}
+
+.about__teacher-photo {
+  width: 243px;
+  height: 306px;
+
+  @include mq(mobile-only) {
+    margin-bottom: 20px;
+  }
+
+  @include mq(tablet) {
+    margin-right: 42px;
+  }
+
+  @include mq(desktop) {
+    width: 530px;
+    height: 668px;
+    margin-right: 60px;
+  }
+}
+
+.about__description {
+  position: relative;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 34px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--prime-text-color);
+  }
+
+  @include mq(tablet) {
+    width: 403px;
+  }
+
+  @include mq(desktop) {
+    width: 642px;
+
+    &::before {
+      top: 52px;
+      left: 1px;
+      width: calc(100% - 2px);
+    }
+  }
+}
+
+.about__subtitle {
+  margin-bottom: 30px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+
+  color: var(--title-text-color);
+
+  @include mq(desktop) {
+    margin-bottom: 45px;
+
+    font-size: 30px;
+    line-height: calc(37 / 30);
+  }
+}
+
+.about__list {
+  padding-left: 27px;
+  margin-bottom: 42px;
+
+  @include mq(tablet) {
+    padding-left: 28px;
+    margin-bottom: 62px;
+  }
+
+  @include mq(desktop) {
+    padding-left: 59px;
+    margin-bottom: 88px;
+  }
+}
+
+.about__item {
+  position: relative;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  letter-spacing: 0.06em;
+
+  color: var(--title-text-color);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 4px;
+    left: -9px;
+    transform: translateX(-100%);
+
+    display: block;
+    width: 18px;
+    height: 14px;
+
+    background-image: url(../images/about/icon-check-mark.svg);
+    background-size: contain;
+  }
+
+  @include mq(tablet) {
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    &::before {
+      top: 0;
+      left: -10px;
+    }
+  }
+
+  @include mq(desktop) {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      top: 0;
+      left: -34px;
+
+      width: 25px;
+      height: 20px;
+    }
+  }
+}
+
+.about__text {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: -22px;
+    left: 0;
+
+    display: block;
+    width: 20px;
+    height: 2px;
+
+    background-color: var(--accent-background);
+  }
+
+  @include mq(tablet) {
+    &::before {
+      top: -32px;
+    }
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 22px;
+
+    &::before {
+      top: -45px;
+    }
+  }
+}
+
+.about__paragraph {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @include mq(tablet) {
+    font-size: 10px;
+    line-height: calc(20 / 10);
+  }
+
+  @include mq(desktop) {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.about__certificate {
+  text-decoration-line: underline;
+  color: var(--accent-text-color);
+}
