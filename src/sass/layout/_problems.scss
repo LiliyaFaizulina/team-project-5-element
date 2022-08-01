@@ -22,16 +22,22 @@
   }
 
   @include mq(desktop) {
-    padding-top: 100px;
+    padding-top: 0;
 
-    background-image: url('../images/campfire.svg'),
-      linear-gradient(
-        to bottom,
-        var(--black-background) 560px,
-        var(--prime-background) 560px,
-        var(--prime-background) 710px
-      );
-    background-position: 100% 37%;
+    background-image: linear-gradient(
+      to bottom,
+      var(--black-background) 560px,
+      var(--prime-background) 560px,
+      var(--prime-background) 710px
+    );
+  }
+}
+
+.problems__container {
+  @include mq(desktop) {
+    padding-top: 100px;
+    background-image: url('../images/campfire.svg');
+    background-position: bottom 150px right 0;
     background-repeat: no-repeat;
   }
 }

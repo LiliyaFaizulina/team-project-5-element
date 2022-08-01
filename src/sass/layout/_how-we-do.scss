@@ -119,6 +119,11 @@
       color: var(--light-text-color);
     }
   }
+
+  .activity__link:hover &,
+  .activity__link:focus & {
+    color: var(--light-text-color);
+  }
 }
 
 .activity__text {
