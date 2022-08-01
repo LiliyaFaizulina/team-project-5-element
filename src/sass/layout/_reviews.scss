@@ -197,6 +197,7 @@
 }
 
 .reviews__list {
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,14 +205,6 @@
 
   @include mq(tablet) {
     gap: 30px;
-  }
-}
-
-.reviews__item:nth-child(n + 4) {
-  display: none;
-
-  @include mq(tablet) {
-    display: flex;
   }
 }
 
@@ -261,4 +254,16 @@
 
   @include mq(desktop) {
   }
+}
+
+.reviews__list .slick-arrow {
+  font-size: 0;
+  border-color: transparent;
+}
+
+.slick-initialized .slick-slide {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
