@@ -6,6 +6,10 @@
     padding-top: 40px;
   }
 
+  @include mq(tablet) {
+    display: flex;
+  }
+
   position: fixed;
   top: 0;
   left: 50%;
@@ -14,28 +18,21 @@
   z-index: 11;
 
   background-color: var(--prime-background);
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // transform: translateX(-50%);
-
-  padding-top: 30px;
-  background-color: var(--prime-background);
 
   @media screen and (min-width: 480px) {
     /*left: 0;*/
     /*transform: translateX(-50%); */
   }
-  @include mq(tablet) {
-    width: 768;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  @include mq(desktop) {
-    width: 1314px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+  // @include mq(tablet) {
+  //   width: 768;
+  //   padding-left: 40px;
+  //   padding-right: 40px;
+  // }
+  // @include mq(desktop) {
+  //   width: 1314px;
+  //   padding-left: 25px;
+  //   padding-right: 25px;
+  // }
 }
 
 .logo {
@@ -53,21 +50,24 @@
 
 .menu-btn {
   /*position: relative;*/
-  position: absolute;
-  top: 25px;
-  right: 15px;
+  @include mq(mobile-only) {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+  }
   display: block;
 
   z-index: 5;
-  /*display: inline-flex;*/
-  margin: 0;
-  padding: 0;
 
   border: none;
   background-color: transparent;
   cursor: pointer;
 
-  @media screen and (min-width: 1366px) {
+  @include mq(tablet) {
+    margin-left: 40px;
+  }
+
+  @include mq(desktop) {
     display: none;
   }
 }
@@ -75,19 +75,23 @@
   position: absolute;
   display: none;
   flex-direction: column;
-  /*position: fixed;*/
+
   top: 0;
   right: 0;
   width: 100%;
-  /*height: 100%;*/
+
   height: 100vh;
-  /*max-width: 480px;*/
+
   padding: 30px 20px;
   background: var(--menu-background);
   transform: translateX(100%);
   transition: transform 250ms;
   /*z-index: 3;*/
   visibility: hidden;
+
+  @include mq(tablet) {
+    padding: 42px 40px;
+  }
 
   @include mq(desktop) {
     display: flex;
@@ -160,14 +164,18 @@
   }
 }
 
-// .call-btn-mobile {
-
-// }
+.call-btn-mobile {
+  @include mq(tablet) {
+    display: none;
+  }
+}
 
 .call-btn {
   @include mq(mobile-only) {
     display: none;
   }
+
+  margin-left: 239px;
   // display: none;
   // align-self: center;
   // width: 260px;
@@ -183,22 +191,6 @@
   //     transform: translateX(-50%);
   //   }
   // }
-  @include mq(tablet) {
-    display: inline-flex;
-    position: absolute;
-    right: 101px;
-    top: 0;
-    transform: translateY(50%);
-  }
-  @include mq(desktop) {
-    display: inline-flex;
-    position: absolute;
-    right: 25px;
-    top: -22px;
-    transform: translateY(50%);
-    width: 336px;
-    height: 70px;
-  }
 }
 
 body.no-scroll {

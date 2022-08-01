@@ -5,9 +5,11 @@
 
   background-image: url(../images/hero/wave-bg.png);
   filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.04));
-  background-position: -64px 70px;
+  background-position: -64px 50px;
   background-repeat: no-repeat;
   background-size: 768px 500px;
+
+  min-height: 547px;
 
   @include mq(tablet) {
     padding-top: 158px;
@@ -22,6 +24,7 @@
   //     width: 530px;
   //   }
 }
+
 .hero__title {
   margin-bottom: 8px;
 
@@ -41,6 +44,7 @@
     font-size: 58px;
   }
 }
+
 .hero__warning,
 .hero__benefit,
 .hero__points {
@@ -52,6 +56,7 @@
     line-height: 1.65;
   }
 }
+
 .hero__benefit {
   margin-bottom: 50px;
   font-weight: 700;
@@ -60,6 +65,7 @@
     width: 320px;
   }
 }
+
 .hero__points {
   font-weight: 700;
   color: var(--accent-text-color);
@@ -70,8 +76,13 @@
 }
 
 .lesson-btn {
-  // display: inline-block;
-  min-width: 260px;
+  @include mq(mobile-only) {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 260px;
+  }
 }
 // .lesson-btn {
 //   height: 48px;
