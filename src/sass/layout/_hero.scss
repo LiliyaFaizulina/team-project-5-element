@@ -94,6 +94,7 @@
 .hero__img {
   position: absolute;
   bottom: 0;
+  width: 208px;
 
   @include mq(mobile-only) {
     left: 50%;
@@ -101,11 +102,13 @@
   }
 
   @include mq(tablet) {
+    width: 370px;
     bottom: 27px;
     right: 18px;
   }
 
   @include mq(desktop) {
+    width: 842px;
     bottom: 30px;
     right: 75px;
   }
