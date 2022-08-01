@@ -16,37 +16,39 @@
   position: relative;
 }
 
-.reviews__vector--left {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
+// .reviews__vector--left {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 20px;
+//   z-index: 100;
 
-  @include mq(tablet) {
-    bottom: 50%;
-    left: 0;
-    transform: translate(25%, 0);
-  }
+//   @include mq(tablet) {
+//     bottom: 50%;
+//     left: 0;
+//     transform: translate(25%, 0);
+//   }
 
-  @include mq(desktop) {
-    transform: translate(150%, 0);
-  }
-}
+//   @include mq(desktop) {
+//     transform: translate(150%, 0);
+//   }
+// }
 
-.reviews__vector--right {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
+// .reviews__vector--right {
+//   position: absolute;
+//   bottom: 10px;
+//   right: 20px;
+//   z-index: 100;
 
-  @include mq(tablet) {
-    bottom: 50%;
-    right: 0;
-    transform: translate(-25%, 0);
-  }
+//   @include mq(tablet) {
+//     bottom: 50%;
+//     right: 0;
+//     transform: translate(-25%, 0);
+//   }
 
-  @include mq(desktop) {
-    transform: translate(-150%, 0);
-  }
-}
+//   @include mq(desktop) {
+//     transform: translate(-150%, 0);
+//   }
+// }
 
 .reviews__title {
   margin-bottom: 25px;
@@ -59,23 +61,26 @@
     margin-bottom: 50px;
   }
 }
+.reviews__wrap {
+  position: relative;
+}
 
 .reviews-card {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 52px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 
   @include mq(tablet) {
     max-width: 688px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 46px;
+
     margin-bottom: 40px;
     padding: 40px 40px;
 
@@ -86,6 +91,20 @@
   @include mq(desktop) {
     max-width: 1090px;
     padding: 50px 112px 50px 82px;
+  }
+}
+
+.card__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  @include mq(tablet) {
+    flex-direction: row;
+    gap: 46px;
+  }
+
+  @include mq(tablet) {
     gap: 40px;
   }
 }
@@ -97,11 +116,8 @@
   justify-content: center;
   gap: 19px;
 
-  margin-bottom: 22px;
-
   @include mq(tablet) {
     gap: 15px;
-    margin-bottom: 0;
   }
 
   @include mq(desktop) {
@@ -196,5 +212,53 @@
 
   @include mq(tablet) {
     display: flex;
+  }
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.reviews__wrap .slick-arrow {
+  position: absolute;
+  z-index: 10;
+
+  font-size: 0;
+  border-color: transparent;
+
+  width: 25px;
+  height: 15px;
+}
+
+.reviews__wrap .slick-arrow.slick-prev {
+  background: url('../images/icon-svg/arrow-pre.svg') 0 0 / 100% no-repeat;
+  left: 0;
+  bottom: -27px;
+  transform: translateY(50%);
+
+  @include mq(tablet) {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  @include mq(desktop) {
+  }
+}
+
+.reviews__wrap .slick-arrow.slick-next {
+  background: url('../images/icon-svg/arrow-next.svg') 0 0 / 100% no-repeat;
+  right: 0;
+  bottom: -27px;
+  transform: translateY(50%);
+  @include mq(tablet) {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  @include mq(desktop) {
   }
 }

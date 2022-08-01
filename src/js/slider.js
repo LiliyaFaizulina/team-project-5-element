@@ -3,3 +3,5 @@ $('.reviews__wrap').slick({
    slidesToShow: 1,
    slidesToScroll:1
  });
+
+ 
