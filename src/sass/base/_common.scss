@@ -34,7 +34,9 @@ body {
   }
 
   @include mq(desktop) {
-    width: 1354px;
+    padding-left: 183px;
+    padding-right: 183px;
+    width: 1680px;
   }
 }
 
@@ -64,29 +66,29 @@ body {
 //   }
 // }
 
-.hero {
-  padding-bottom: 27px;
+// .hero {
+//   padding-bottom: 27px;
 
-  @include mq(tablet) {
-    padding-top: 40px;
-    padding-bottom: 96px;
-  }
+//   @include mq(tablet) {
+//     padding-top: 40px;
+//     padding-bottom: 96px;
+//   }
 
-  @include mq(desktop) {
-    padding-top: 55px;
-    padding-bottom: 272px;
-  }
-}
+//   @include mq(desktop) {
+//     padding-top: 55px;
+//     padding-bottom: 272px;
+//   }
+// }
 
-.advantages {
-  padding-top: 43px;
-  padding-bottom: 70px;
+// .advantages {
+//   padding-top: 43px;
+//   padding-bottom: 70px;
 
-  @include mq(desktop) {
-    padding-top: 100px;
-    padding-bottom: 130px;
-  }
-}
+//   @include mq(desktop) {
+//     padding-top: 100px;
+//     padding-bottom: 130px;
+//   }
+// }
 
 // .problems {
 //   padding-top: 25px;

@@ -4,7 +4,7 @@
   padding-bottom: 232px;
 
   background-image: url(../images/hero/wave-bg.png);
-  filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.04));
+  filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.01));
   background-position: -64px 50px;
   background-repeat: no-repeat;
   background-size: 768px 500px;
@@ -12,17 +12,22 @@
   min-height: 547px;
 
   @include mq(tablet) {
-    padding-top: 158px;
+    padding-top: 162px;
     padding-bottom: 96px;
-    background-image: url(../images/hero/wave-bg-1680-975.png);
+    min-height: 500px;
+
+    background-position: 0px 30px;
   }
-  //   @include mq(desktop) {
+
   @include mq(desktop) {
     padding-top: 185px;
     padding-bottom: 272px;
+    min-height: 975px;
+
+    background-image: url(../images/hero/wave-bg-1680-975.png);
+    background-size: 1680px 975px;
+    background-position: 0px 0px;
   }
-  //     width: 530px;
-  //   }
 }
 
 .hero__title {
@@ -42,6 +47,7 @@
   }
   @include mq(desktop) {
     font-size: 58px;
+    width: 530px;
   }
 }
 
@@ -84,52 +90,23 @@
     width: 260px;
   }
 }
-// .lesson-btn {
-//   height: 48px;
 
-//   @include mq(desktop) {
-//     width: 354px;
-//     height: 70px;
-//   }
-// }
-// .wave-bg {
-//   display: block;
-//   /*min-width: 320px;*/
-//   min-width: 100%;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   z-index: -1;
-
-//   filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
-
-//   &--desk {
-//     display: none;
-//   }
-
-//   @media screen and (min-width: 480px) {
-//     /*left: -35px;
-//         top: 0;
-//         transform: translate(0, 0); */
-//   }
-//   @include mq(desktop) {
-//     &--desk {
-//       display: block;
-//     }
-//     &--mob {
-//       display: none;
-//     }
-//   }
-// }
 .hero__img {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+
+  @include mq(mobile-only) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @include mq(tablet) {
-    position: absolute;
     bottom: 27px;
     right: 18px;
+  }
+
+  @include mq(desktop) {
+    bottom: 30px;
+    right: 75px;
   }
 }
