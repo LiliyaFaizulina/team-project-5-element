@@ -1,138 +1,140 @@
 .problems {
-    margin-top: -1px;
-    padding-top: 25px;
-    padding-bottom: 35px;
+  margin-top: -1px;
+  padding-top: 25px;
+  padding-bottom: 35px;
 
-    background-image: linear-gradient(to bottom,
-            var(--black-background) 76%,
-            var(--prime-background) 76%);
+  background-image: linear-gradient(
+    to bottom,
+    var(--black-background) 76%,
+    var(--prime-background) 76%
+  );
 
-    @include mq(tablet) {
-        padding-top: 55px;
-        padding-bottom: 30px;
+  @include mq(tablet) {
+    padding-top: 55px;
+    padding-bottom: 30px;
 
-        background-image: linear-gradient(to bottom,
-                var(--black-background) 340px,
-                var(--prime-background) 340px,
-                var(--prime-background) 511px);
-    }
+    background-image: linear-gradient(
+      to bottom,
+      var(--black-background) 340px,
+      var(--prime-background) 340px,
+      var(--prime-background) 511px
+    );
+  }
 
-    @include mq(desktop) {
-        padding-top: 100px;
+  @include mq(desktop) {
+    padding-top: 100px;
 
-        background-image: url('../images/campfire.svg'), linear-gradient(to bottom,
-                var(--black-background) 560px,
-                var(--prime-background) 560px,
-                var(--prime-background) 710px);
-        background-position: 100% 37%;
-        background-repeat: no-repeat;
-    }
+    background-image: url('../images/campfire.svg'),
+      linear-gradient(
+        to bottom,
+        var(--black-background) 560px,
+        var(--prime-background) 560px,
+        var(--prime-background) 710px
+      );
+    background-position: 100% 37%;
+    background-repeat: no-repeat;
+  }
 }
 
 .problems__title {
-    text-align: left;
-    font-size: 24px;
-    line-height: 1.3;
+  text-align: left;
+  font-size: 24px;
+  line-height: 1.3;
 
-    @include mq(tablet) {
-        width: 450px;
-    }
+  @include mq(tablet) {
+    width: 450px;
+  }
 
-    @include mq(desktop) {
-        width: 810px;
+  @include mq(desktop) {
+    width: 810px;
 
-        font-size: 46px;
-    }
+    font-size: 46px;
+  }
 }
 
 .problems__list {
-    margin-top: 25px;
-    padding: 20px 27px;
+  margin-top: 25px;
+  padding: 20px 27px;
 
-    max-width: 440px;
+  background: var(--prime-background);
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
-    background: var(--prime-background);
-    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    column-gap: 68px;
 
-    @include mq(tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
+    margin-top: 30px;
+    padding: 28px 90px;
+  }
 
-        margin-top: 30px;
-        padding: 28px 90px;
+  @include mq(desktop) {
+    row-gap: 30px;
+    column-gap: 40px;
 
-        max-width: 688px;
-    }
+    margin-top: 68px;
+    padding: 67px 113px;
 
-    @include mq(desktop) {
-        gap: 30px;
-
-        margin-top: 68px;
-        padding: 67px 113px;
-
-        max-width: 1314px;
-        height: 362px;
-
-    }
+    height: 362px;
+  }
 }
 
 .problems__item {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.71;
-    align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  align-items: center;
 
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 
-    counter-increment: section;
+  counter-increment: section;
 
-    @include mq(mobile-only) {
-        &:not(:last-child) {
-            margin-bottom: 15px;
-        }
+  @include mq(mobile-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
+  }
 
-    @include mq(tablet) {
-        width: calc((100% - 68px) / 2);
-    }
+  @include mq(tablet) {
+    width: calc((100% - 68px) / 2);
+  }
 
-    @include mq(desktop) {
-        width: calc((100% - 80px) / 3);
-    }
+  @include mq(desktop) {
+    width: calc((100% - 80px) / 3);
+  }
 }
 
 .problems__text {
-    font-size: 14px;
-    line-height: calc(20 / 14);
+  font-size: 14px;
+  line-height: calc(20 / 14);
 
-    @include mq(tablet) {
-        line-height: calc(20 / 14);
-    }
+  @include mq(tablet) {
+    line-height: calc(20 / 14);
+  }
+
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  &::before {
+    content: '\2015  0'counter(section);
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    line-height: calc(24 / 20);
+
+    color: var(--accent-text-color);
 
     @include mq(desktop) {
-        font-size: 20px;
-        line-height: calc(28 / 20);
+      margin-bottom: 10px;
+
+      font-size: 20px;
+      line-height: calc(33 / 20);
     }
-
-
-    &::before {
-        content: "\2015  0" counter(section);
-        display: block;
-
-        margin-bottom: 5px;
-
-        font-size: 20px;
-        line-height: calc(24 / 20);
-
-        color: var(--accent-text-color);
-
-        @include mq(desktop) {
-            margin-bottom: 10px;
-
-            font-size: 20px;
-            line-height: calc(33 / 20);
-        }
-    }
+  }
 }

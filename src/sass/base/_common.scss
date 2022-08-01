@@ -86,18 +86,18 @@ body {
   }
 }
 
-.problems {
-  padding-top: 25px;
-  padding-bottom: 35px;
+// .problems {
+//   padding-top: 25px;
+//   padding-bottom: 35px;
 
-  @include mq(tablet) {
-    padding-top: 55px;
-    padding-bottom: 30px;
-  }
-  @include mq(desktop) {
-    padding-top: 100px;
-  }
-}
+//   @include mq(tablet) {
+//     padding-top: 55px;
+//     padding-bottom: 30px;
+//   }
+//   @include mq(desktop) {
+//     padding-top: 100px;
+//   }
+// }
 
 // .how-we-do {
 //   padding-top: 35px;
