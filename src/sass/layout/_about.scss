@@ -220,6 +220,14 @@
 }
 
 .about__certificate {
+  display: block;
   text-decoration-line: underline;
   color: var(--accent-text-color);
+  transform: translateX(0) scale(1);
+  transition: transform var(--animation);
+
+  &:hover,
+  &:focus {
+    transform: translateX(60px) scale(1.2);
+  }
 }
