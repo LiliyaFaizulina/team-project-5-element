@@ -37,6 +37,9 @@
 
 .contacts__title {
   margin-bottom: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 280px;
 
   @include mq(mobile-only) {
     font-size: 14px;
@@ -44,6 +47,11 @@
 
   @include mq(tablet) {
     margin-bottom: 50px;
+    width: 625px;
+  }
+
+  @include mq(desktop) {
+    width: 980px;
   }
 }
 
