@@ -11,6 +11,12 @@
     right: 0;
     bottom: -62px;
 
+    @include mq(mobile) {
+      right: 50%;
+      bottom: -55px;
+      transform: translateX(240px);
+    }
+
     display: block;
     width: 120px;
     height: 137px;
@@ -31,6 +37,7 @@
 
     &::after {
       bottom: 35px;
+      transform: translateX(384px);
 
       width: 374px;
       height: 273px;
@@ -50,8 +57,8 @@
     padding-bottom: 95px;
 
     &::after {
-      left: 0;
       bottom: -217px;
+      transform: translateX(-168px);
 
       width: 672px;
       height: 502px;
