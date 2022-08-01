@@ -17,5 +17,6 @@
 
 import './js/jquery';
 import './js/script';
+import './js/modal';
 
 
