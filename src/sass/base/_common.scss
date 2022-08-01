@@ -112,18 +112,18 @@ body {
 //   }
 // }
 
-.program {
-  padding-top: 50px;
-  padding-bottom: 35px;
-  @include mq(tablet) {
-    padding-top: 60px;
-    padding-bottom: 137px;
-  }
-  @include mq(desktop) {
-    padding-top: 120px;
-    padding-bottom: 95px;
-  }
-}
+// .program {
+//   padding-top: 50px;
+//   padding-bottom: 35px;
+//   @include mq(tablet) {
+//     padding-top: 60px;
+//     padding-bottom: 137px;
+//   }
+//   @include mq(desktop) {
+//     padding-top: 120px;
+//     padding-bottom: 95px;
+//   }
+// }
 
 .benefits {
   padding-top: 35px;

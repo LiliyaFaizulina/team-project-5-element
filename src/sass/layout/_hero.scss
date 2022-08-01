@@ -1,133 +1,129 @@
 .hero {
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    padding-top: 60px;
-    padding-bottom: 35px;
-    
-    overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 35px;
 
-    @include mq(tablet) {
-        display: flex;
-    }
+  overflow: hidden;
 
-    background-image: url(../images/hero/wave-bg-1680-975.png);
-    background-repeat: no-repeat;
-    background-size: 768px 500px;
-    background-position: 0px -20px;
-    
-    filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
-    /*background-position: left 10 top 10;*/
-        @include mq(tablet) {
-            background-position: 0px -65px;
-        }
-        @include mq(desktop) {
-            background-size: 1680px 878px;
-            padding-left: 40px;
-        }
+  @include mq(tablet) {
+    display: flex;
+  }
+
+  background-image: url(../images/hero/wave-bg-1680-975.png);
+  background-repeat: no-repeat;
+  background-size: 768px 500px;
+  background-position: 0px -20px;
+
+  filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.04));
+  /*background-position: left 10 top 10;*/
+  @include mq(tablet) {
+    background-position: 0px -65px;
+  }
+  @include mq(desktop) {
+    background-size: 1680px 878px;
+    padding-left: 40px;
+  }
 }
 .hero__container {
-    display: flex;
-    flex-direction: column;
-    /*position: relative;*/
-    width: 320px;
+  display: flex;
+  flex-direction: column;
+  /*position: relative;*/
+  width: 320px;
 
-    @include mq(tablet) {
-            
-            
-        }
-    @include mq(desktop) {
-      
-        width: 530px;
-    }
+  @include mq(tablet) {
+  }
+  @include mq(desktop) {
+    width: 530px;
+  }
 }
 .hero__title {
-        margin-bottom: 8px;
+  margin-bottom: 8px;
 
-        font-weight: 800;
-        font-size: 20px;
-        line-height: 1.3;
-            
-        letter-spacing: 0.03em;
-    
-        color: var(--title-text-color);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
 
-        @include mq(tablet) {
-            font-size: 26px;
-        }
-                @include mq(desktop) {
-                    font-size: 58px;
-                }
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+
+  @include mq(tablet) {
+    font-size: 26px;
+  }
+  @include mq(desktop) {
+    font-size: 58px;
+  }
 }
 .hero__warning,
 .hero__benefit,
-.hero__points{
-    font-size: 14px;
-    line-height: 1.57;
+.hero__points {
+  font-size: 14px;
+  line-height: 1.57;
 
-    @include mq(desktop) {
-            font-size: 20px;
-            line-height: 1.65;
-        }
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
 }
 .hero__benefit {
-    margin-bottom: 50px;
-    font-weight: 700;
-    color: var(--title-text-color);
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: var(--title-text-color);
 }
 .hero__points {
-    font-weight: 700;
-    color: var(--accent-text-color);
-    
-    @include mq(desktop) {
-        color: var(--title-text-color);
-        }
+  font-weight: 700;
+  color: var(--accent-text-color);
+
+  @include mq(desktop) {
+    color: var(--title-text-color);
+  }
 }
 .lesson-btn {
-    height: 48px;
+  height: 48px;
 
-    @include mq(desktop) {
-        width: 354px;
-        height: 70px;
-    }
+  @include mq(desktop) {
+    width: 354px;
+    height: 70px;
+  }
 }
 .wave-bg {
-    display: block;
-    /*min-width: 320px;*/
-    min-width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    
-    filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
+  display: block;
+  /*min-width: 320px;*/
+  min-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 
-    &--desk {
-        display: none;
-    }
+  filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
 
-    @media screen and (min-width: 480px) {
-        /*left: -35px;
+  &--desk {
+    display: none;
+  }
+
+  @media screen and (min-width: 480px) {
+    /*left: -35px;
         top: 0;
-        transform: translate(0, 0); */       
+        transform: translate(0, 0); */
+  }
+  @include mq(desktop) {
+    &--desk {
+      display: block;
     }
-    @include mq(desktop) {
-                
-        &--desk {
-            display: block;
-        }
-        &--mob {
-            display: none;
-        }
+    &--mob {
+      display: none;
     }
+  }
 }
 .hero__img {
-    margin-top: 54px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 54px;
+  margin-left: auto;
+  margin-right: auto;
 
-    @include mq(tablet) {
-        margin: 0;
-    }
+  @include mq(tablet) {
+    margin: 0;
+  }
 }
