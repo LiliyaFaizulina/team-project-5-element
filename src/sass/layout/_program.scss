@@ -3,46 +3,46 @@
 
   padding-top: 50px;
   padding-bottom: 35px;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   background-color: var(--black-background);
 
-  @include mq(mobile-only) {
-    max-width: 480px;
+  // @include mq(mobile-only) {
+  // max-width: 480px;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -62px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: -62px;
+    display: block;
+    width: 120px;
+    height: 137px;
 
-      display: block;
-      width: 120px;
-      height: 137px;
-
-      background-image: url(../images/program/program-bg_mob.png);
-      // mobile retina screen
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/program/program-bg_mob@2x.png);
-      }
-      background-size: contain;
+    background-image: url(../images/program/program-bg_mob.png);
+    // mobile retina screen
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/program/program-bg_mob@2x.png);
     }
+    background-size: contain;
   }
+  // }
 
-  @include mq(tablet-only) {
-    width: 768px;
+  // @include mq(tablet-only) {
+  @include mq(tablet) {
+    // width: 768px;
     padding-top: 60px;
     padding-bottom: 137px;
 
     &::after {
-      content: '';
-      position: absolute;
-      right: 0;
+      // content: '';
+      // position: absolute;
+      // right: 0;
       bottom: 35px;
 
-      display: block;
+      // display: block;
       width: 374px;
       height: 273px;
 
@@ -53,22 +53,22 @@
         (min-resolution: 2dppx) {
         background-image: url(../images/program/program-bg_tab@2x.png);
       }
-      background-size: contain;
+      // background-size: contain;
     }
   }
 
   @include mq(desktop) {
-    width: 1680px;
+    // width: 1680px;
     padding-top: 120px;
     padding-bottom: 95px;
 
     &::after {
-      content: '';
-      position: absolute;
+      // content: '';
+      // position: absolute;
       left: 0;
       bottom: -217px;
 
-      display: block;
+      // display: block;
       width: 672px;
       height: 502px;
 
@@ -79,7 +79,7 @@
         (min-resolution: 2dppx) {
         background-image: url(../images/program/program-bg_desk@2x.png);
       }
-      background-size: contain;
+      // background-size: contain;
     }
   }
 }
@@ -87,11 +87,12 @@
 .program__title {
   color: var(--light-text-color);
 
-  @include mq(mobile-only) {
-    margin-bottom: 30px;
-  }
+  // @include mq(mobile-only) {
+  margin-bottom: 30px;
+  // }
 
-  @include mq(tablet-only) {
+  // @include mq(tablet-only) {
+  @include mq(tablet) {
     margin-bottom: 52px;
   }
 
