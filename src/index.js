@@ -1,5 +1,4 @@
-import './js/jquery';
-import './js/slick.min';
-import './js/script';
+
+import './js/slider';
 import './js/modal';
 import './js/mobile-menu';
