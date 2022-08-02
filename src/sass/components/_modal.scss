@@ -1,154 +1,167 @@
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 20;
+//   overflow: hidden;
+
+//   background-color: var(--menu-background);
+
+//   opacity: 1;
+//   transition: opacity, visibility var(--animation);
+// }
+
+// .backdrop.is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
 .backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 20;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    background-color: var(--menu-background);
+  z-index: 20;
 
-    opacity: 1;
-    transition: opacity, visibility var(--animation);
+  @include mq(mobile-only) {
+    padding-top: 50px;
+  }
 
-}
+  width: 100vw;
+  height: 100vh;
 
-.backdrop.is-hidden {
+  overflow-y: scroll;
+
+  background-color: var(--menu-background);
+  opacity: 1;
+
+  transition: opacity, visibility var(--animation);
+
+  &.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+  }
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%);
-    transition: transform var(--animation);
+.no-scroll {
+  overflow: hidden;
 }
 
 .modal {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 90px 10px;
+
+  width: 320px;
+  height: 621px;
+
+  @include mq(tablet) {
+    padding: 100px 50px;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%) scale(1);
 
-    padding: 35px 25px;
-
-    width: 100%;
-    height: 100%;
-    text-align: center;
-
-    color: var(--light-text-color);
-
-    @include textStyle(var(--light-text-color), 26px, 1.5);
-
-    background-image: url('../images/campfire2.svg');
-    background-position: left 50% bottom 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    transform: translatex(-50%);
+    width: 453px;
 
     transition: transform var(--animation);
 
-
-    @include mq(mobile) {
-        position: absolute;
-        top: 40px;
-        left: 50%;
-
-        padding: 40px 30px;
-        width: 440px;
-        height: 85%;
-
-        transform: translatex(-50%);
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(0.7);
     }
+  }
 
-    @include mq(tablet) {
-        top: 65px;
+  text-align: center;
 
-        padding: 50px 40px;
-        width: 698px;
-    }
+  color: var(--light-text-color);
 
-    @include mq(desktop) {
-        top: 60px;
+  @include textStyle(var(--light-text-color), 26px, 1.5);
 
-        padding: 100px 70px;
-        width: 1216px;
-    }
+  @include mq(desktop) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+
+  background-image: url('../images/campfire2.svg');
+  background-position: left 50% top 0;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .modal__title {
-    font-size: 26px;
+  font-size: 20px;
+  @include mq(mobile-only) {
+    width: 250px;
+  }
+  margin-left: auto;
+  margin-right: auto;
 
-    @include mq(tablet) {
-        font-size: 36px;
-    }
+  @include mq(tablet) {
+    font-size: 30px;
+  }
 
-    @include mq(desktop) {
-        font-size: 52px;
-    }
+  @include mq(desktop) {
+    font-size: 46px;
+  }
 }
 
 .modal__text {
-    margin-top: 30px;
-    font-size: 24px;
+  margin-top: 30px;
+  font-size: 12px;
 
-    @include mq(mobile) {
-        margin-top: 40px;
-    }
+  @include mq(mobile) {
+    margin-top: 40px;
+    font-size: 14px;
+  }
 
-    @include mq(tablet) {
-        margin-top: 60px;
-        font-size: 34px;
-    }
+  @include mq(tablet) {
+    margin-top: 60px;
+    font-size: 26px;
+  }
 
-    @include mq(desktop) {
-        margin-top: 90px;
-        font-size: 44px;
-    }
+  @include mq(desktop) {
+    font-size: 30px;
+  }
 }
 
 .modal__text-support {
-    display: block;
-    font-size: 20px;
+  display: block;
+  font-size: 20px;
 
-    @include mq(tablet) {
-        font-size: 30px;
-    }
+  @include mq(tablet) {
+    font-size: 30px;
+  }
 
-    @include mq(desktop) {
-        font-size: 40px;
-    }
+  @include mq(desktop) {
+    font-size: 40px;
+  }
 }
 
 .modal__btn {
-    margin-top: 30px;
-    margin-bottom: 35px;
+  margin-top: 50px;
 
-    height: 66px;
-    font-size: 16px;
+  color: var(--light-text-color);
+  background-color: transparent;
 
-    color: var(--light-text-color);
-    background-color: transparent;
+  outline: 2px solid var(--light-text-color);
+  outline-offset: -2px;
 
-    outline: 4px solid var(--light-text-color);
-    outline-offset: -4px;
+  @include mq(mobile) {
+    margin-top: 70px;
+  }
 
-    @include mq(mobile) {
-        margin-top: 60px;
-        margin-bottom: 70px;
-    }
+  @include mq(tablet) {
+    margin-top: 90px;
+  }
 
-    @include mq(tablet) {
-        margin-top: 90px;
-        margin-bottom: 110px;
-        padding: 30px 20px;
-        font-size: 26px;
-    }
+  @include mq(desktop) {
+  }
+}
 
-    @include mq(desktop) {
-        padding: 60px 35px;
-        font-size: 36px;
-    }
-
+.modal__btn.btn {
+  min-width: 240px;
 }
