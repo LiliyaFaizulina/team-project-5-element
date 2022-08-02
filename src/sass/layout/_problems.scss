@@ -25,24 +25,18 @@
     padding-top: 100px;
     position: relative;
 
-    background-image: linear-gradient(
-      to bottom,
-      var(--black-background) 560px,
-      var(--prime-background) 560px,
-      var(--prime-background)
-    );
+    background-image: url('../images/campfire.svg'),
+      linear-gradient(
+        to bottom,
+        var(--black-background) 560px,
+        var(--prime-background) 560px,
+        var(--prime-background)
+      );
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 88px;
-      transform: translateX(433px);
-      background-image: url('../images/campfire.svg');
-      display: block;
-      width: 407px;
-      height: 472px;
-    }
+    background-repeat: no-repeat;
+    background-size: 407px, 100%;
+    background-position-x: calc(50% + 650px), 0;
+    background-position-y: top 88px, top 0;
   }
 }
 
