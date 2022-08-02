@@ -86,10 +86,10 @@
     min-height: 581px;
   }
 
-  background-image: url('../images/campfire2.svg');
+  /*background-image: url('../images/campfire2.svg');
   background-position: left 50% top 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain;*/
 }
 
 .modal__title {
@@ -142,7 +142,12 @@
 }
 
 .modal__btn {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+
+  /*position: absolute;                                                 
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%), scale(1); */                
 
   color: var(--light-text-color);
   background-color: transparent;
@@ -160,8 +165,128 @@
 
   @include mq(desktop) {
   }
+
 }
 
 .modal__btn.btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scale(1);
+
+  &:hover {
+    transform: translateX(-50%) scale (1.1);
+  }
   min-width: 240px;
+
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*position: relative;*/
+      margin: 30px auto;
+      /*width: 200px;
+      height: 200px;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;*/
+      box-shadow: inset 0 0 0 1px var(--accent-background);
+    }
+  
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      z-index: -1;
+      margin: -5%;
+      box-shadow: inset 0 0 0 6px var(--accent-background);
+      animation: anim-modal__btn 16s linear infinite;
+    }
+  
+    &::before {
+      animation-delay: -8s;
+    }
+  
+    &:hover::after,
+    &:hover::before {
+      background-color: var(--accent-background);
+    }
+  
+    @keyframes anim-modal__btn {
+  
+      0%, 100% {
+        clip: rect(0px, 264px, 6px, 0px);
+      }
+  
+      25% {
+        clip: rect(0px, 6px, 94px, 0px);
+      }
+  
+      50% {
+        clip: rect(92px, 264px, 94px, 0px);
+      }
+  
+      75% {
+        clip: rect(0px, 264px, 94px, 262px);
+      }
+    }
 }
+/*---------------------------------------------------------------------------------------------------------*/
+
+.modal__wrap {
+  position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 90px 10px;
+  
+    width: 320px;
+    height: 621px;
+  
+    @include mq(tablet) {
+      padding: 100px 50px;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transform: translate(-50%, -50%) scale(1);
+  
+      width: 453px;
+  
+      transition: transform var(--animation);
+  
+      .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.7);
+      }
+    }
+  
+    text-align: center;
+  
+    color: var(--light-text-color);
+  
+    @include textStyle(var(--light-text-color), 26px, 1.5);
+  
+    @include mq(desktop) {
+      min-width: 528px;
+      min-height: 581px;
+    }
+  
+    background-image: url('../images/campfire2.svg');
+    background-position: left 50% top 0;
+    background-repeat: no-repeat;
+    background-size: 50% 60%;
+  
+
+  animation: rotateY 1500ms infinite alternate ease-in-out 1000ms;
+}
+
+        @keyframes rotateY {
+          0% {
+            transform: perspective(1000px) rotateY(-45deg);
+          }
+    
+          100% {
+            transform: perspective(1000px) rotateY(45deg);
+          }
+        }
