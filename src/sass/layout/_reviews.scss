@@ -130,6 +130,15 @@
   }
 }
 
+.reviews-card--animation {
+  transform: scale(1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+  }
+}
+
 .reviews-card__content {
   display: flex;
   flex-direction: column;

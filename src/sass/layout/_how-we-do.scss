@@ -72,12 +72,14 @@
   @include mq(desktop) {
     padding: 35px 28px;
   }
+  transform: scale(1);
   transition: color var(--animation), background-color var(--animation);
 
   &:hover,
   &:focus {
     background-color: var(--accent-background);
     color: var(--light-text-color);
+    transform: scale(1.04);
   }
 }
 
