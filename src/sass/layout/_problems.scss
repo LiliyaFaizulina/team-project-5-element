@@ -22,23 +22,27 @@
   }
 
   @include mq(desktop) {
-    padding-top: 0;
+    padding-top: 100px;
+    position: relative;
 
     background-image: linear-gradient(
       to bottom,
       var(--black-background) 560px,
       var(--prime-background) 560px,
-      var(--prime-background) 710px
+      var(--prime-background)
     );
-  }
-}
 
-.problems__container {
-  @include mq(desktop) {
-    padding-top: 100px;
-    background-image: url('../images/campfire.svg');
-    background-position: bottom 150px right 0;
-    background-repeat: no-repeat;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 88px;
+      transform: translateX(433px);
+      background-image: url('../images/campfire.svg');
+      display: block;
+      width: 407px;
+      height: 472px;
+    }
   }
 }
 
@@ -77,6 +81,8 @@
   }
 
   @include mq(desktop) {
+    position: relative;
+    z-index: 2;
     row-gap: 30px;
     column-gap: 40px;
 

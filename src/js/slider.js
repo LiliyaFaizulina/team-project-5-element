@@ -26,3 +26,4 @@ $('.reviews__list').slick({
     },
   ],
 });
+

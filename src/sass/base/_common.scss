@@ -1,5 +1,9 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--prime-text-color);
@@ -34,9 +38,9 @@ body {
   }
 
   @include mq(desktop) {
-    padding-left: 183px;
-    padding-right: 183px;
-    width: 1680px;
+    padding-left: 26px;
+    padding-right: 26px;
+    width: 1366px;
   }
 }
 
