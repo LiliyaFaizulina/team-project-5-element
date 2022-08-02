@@ -1,10 +1,24 @@
-.header {
+.fix-header {
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
   z-index: 11;
+  background-color: var(--prime-background);
+  width: 100vw;
+  height: 90px;
+  @include mq(tablet) {
+    height: 110px;
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 12;
 
   padding-top: 30px;
   padding-bottom: 30px;
@@ -17,7 +31,7 @@
     display: flex;
   }
 
-  background-color: var(--prime-background);
+  background-color: transparent;
 
   @include mq(desktop) {
     align-items: center;
