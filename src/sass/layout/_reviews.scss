@@ -63,6 +63,11 @@
 }
 .reviews__wrap {
   position: relative;
+
+  @include mq(desktop) {
+    width: 1090px;
+    margin: 0 auto;
+  }
 }
 
 .reviews-card {
@@ -197,23 +202,40 @@
 }
 
 .reviews__list {
-  min-width: 0;
+  max-width: 182px;
+  margin: 0 auto;
+  margin-top: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 
   @include mq(tablet) {
+    max-width: 558px;
+    margin-top: 40px;
     gap: 30px;
   }
 }
 
-.slick-track {
-  display: flex;
+.reviews__item {
+  margin-left: 5px;
+  margin-right: 5px;
+
+  @include mq(tablet) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
-.slick-list {
-  overflow: hidden;
+.reviews__item img {
+  transition: outline 300ms ease-in-out;
+}
+
+.reviews__item.slick-slide.slick-current.slick-active img {
+  outline: 2px solid #ff6b09;
+  outline-offset: -2px;
+
+  border-radius: 50%;
 }
 
 .reviews__wrap .slick-arrow {
@@ -230,7 +252,7 @@
 .reviews__wrap .slick-arrow.slick-prev {
   background: url('../images/icon-svg/arrow-pre.svg') 0 0 / 100% no-repeat;
   left: 0;
-  bottom: -27px;
+  bottom: -79px;
   transform: translateY(50%);
 
   @include mq(tablet) {
@@ -245,7 +267,7 @@
 .reviews__wrap .slick-arrow.slick-next {
   background: url('../images/icon-svg/arrow-next.svg') 0 0 / 100% no-repeat;
   right: 0;
-  bottom: -27px;
+  bottom: -79px;
   transform: translateY(50%);
   @include mq(tablet) {
     bottom: 50%;
@@ -261,9 +283,10 @@
   border-color: transparent;
 }
 
-.slick-initialized .slick-slide {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.slick-slide img {
+  max-width: 90px;
+
+  @include mq(tablet) {
+    max-width: 150px;
+  }
 }
