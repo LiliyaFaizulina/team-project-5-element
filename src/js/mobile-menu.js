@@ -3,17 +3,19 @@
   const mobileMenuRef = document.querySelector('[data-menu]');
   const bodyRef = document.querySelector('#page');
   const links = document.querySelectorAll('[data-nav]');
-  const desktopSize = window.matchMedia('screen and (min-width: 1366px)');
+  const desktopSize = window.matchMedia('screen and (max-width: 1365px)');
 
   window.onload = testScreenSize;
   window.addEventListener('resize', testScreenSize);
 
   function testScreenSize() {
     if (desktopSize.matches) {
-      return;
+      links.forEach(link => link.addEventListener('click', toggleMobileMenu));
+    } else {
+      links.forEach(link =>
+        link.removeEventListener('click', toggleMobileMenu)
+      );
     }
-
-    links.forEach(link => link.addEventListener('click', toggleMobileMenu));
   }
 
   menuBtnRef.addEventListener('click', toggleMobileMenu);
