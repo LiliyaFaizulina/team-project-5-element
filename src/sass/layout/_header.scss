@@ -27,6 +27,8 @@
 
   z-index: 12;
 
+  display: flex;
+  align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -45,6 +47,14 @@
 
 .logo {
   display: flex;
+}
+
+.logo__icon {
+  @include mq(tablet) {
+    display: flex;
+    width: 128px;
+    height: 45px;
+  }
 }
 
 .header__logo {
@@ -235,160 +245,102 @@ body.no-scroll {
   overflow: hidden;
 }
 /*--------------------- Logo animation ------------------------------------*/
+.logo__icon--mobile {
+  display: block;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
 
 .logo__container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  row-gap: 3px;
-  width: 80px;
-  height: 30px;
+  flex-direction: column;
+  height: 45px;
+
+  transform: scale(1);
+  transition: transform var(--animation), color var(--animation);
 
   .header__logo:hover &,
   .header__logo:focus & {
-    position: relative;
+    transform: scale(1.1);
   }
 
-  @include mq(tablet) {
-    width: 128px;
-    height: 46px;
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+
+.logo__top {
+  position: relative;
+
+  display: flex;
+  margin-bottom: 3px;
+
+  @include mq(mobile-only) {
+    margin-bottom: 4px;
   }
 }
 
-.logo__gif {
-  position: absolute;
-  width: 25px;
-  height: 30px;
-  transform: translate(128%, 0);
-  opacity: 0;
-  transition: transform var(--animation), opacity var(--animation);
-
-  @include mq(tablet) {
-    width: 35px;
-    height: 55px;
-    transform: translate(140%, 0);
-  }
-
-  .header__logo:hover &,
-  .header__logo:focus & {
-    display: block;
-    position: absolute;
-    transform: translate(128%, -35%);
-    opacity: 1;
-
-    @include mq(tablet) {
-      transform: translate(140%, -35%);
-    }
-  }
-}
 .logo__hell,
 .logo__en {
   font-weight: 800;
-  font-size: 14px;
-  line-height: 1.2;
-
+  font-size: 26px;
+  line-height: calc(32 / 26);
   letter-spacing: 0.04em;
 
-  @include mq(tablet) {
-    font-size: 26px;
-    line-height: 1.23;
-  }
-
   color: var(--title-text-color);
-  transform: scale(1);
-  transition: transform var(--animation);
 
+  @include mq(mobile-only) {
+    margin-bottom: 4px;
+  }
+}
+
+.logo__en {
   .header__logo:hover &,
   .header__logo:focus & {
-    position: absolute;
-    transform: scale(1.1);
-  }
-}
-.header__logo:hover .logo__hell,
-.header__logo:focus .logo__hell {
-  left: 3px;
-  transform: translateY(-1px);
-
-  @include mq(tablet) {
-    left: -7px;
-    transform: translateY(0);
-  }
-}
-.header__logo:hover .logo__en,
-.header__logo:focus .logo__en {
-  right: -2px;
-  transform: translateY(-1px);
-
-  @include mq(tablet) {
-    right: -2px;
-    transform: translateY(0);
+    margin-left: 30px;
   }
 }
 
 .logo__icon--header {
-  max-width: 14px;
-  max-height: 20px;
-  margin-left: 3px;
-  margin-right: 3px;
-  opacity: 1;
-  transition: opacity var(--animation) 250ms;
+  margin-left: 4px;
+  margin-right: 4px;
 
-  @include mq(tablet) {
-    max-width: 22;
-    max-height: 30;
-    align-self: flex-start;
+  .header__logo:hover &,
+  .header__logo:focus & {
+    display: none;
   }
+}
+
+.logo__gif {
+  display: none;
 
   .header__logo:hover &,
   .header__logo:focus & {
     position: absolute;
-    transform: translate(240%, -50%);
-    opacity: 0;
-    transition: transform var(--animation) 250ms;
+    top: -11px;
+    left: 63px;
+    transform: translateX(-25%);
+
+    display: block;
+    width: 30px;
+    height: 38px;
   }
 }
-.logo__helish,
-.logo__english {
-  font-weight: 700;
-  font-size: 5px;
-  line-height: 1.2;
 
+.logo__bottom {
+  padding-left: 2px;
+
+  font-weight: 700;
+  font-size: 8px;
+  line-height: calc(10 / 8);
   letter-spacing: 0.18em;
   text-transform: uppercase;
 
-  @include mq(tablet) {
-    font-size: 8px;
-    line-height: 1.25;
-  }
-  transform: scale(1);
-  transition: transform var(--animation);
-
-  .header__logo:hover &,
-  .header__logo:focus & {
-    position: absolute;
-    transform: scale(1.2);
-  }
+  color: var(--title-text-color);
 }
+
 .logo__helish {
   color: var(--accent-text-color);
-
-  .header__logo:hover &,
-  .header__logo:focus & {
-    left: 12px;
-    bottom: -2px;
-  }
-}
-.logo__english {
-  margin-left: 4px;
-  color: var(--title-text-color);
-
-  .header__logo:hover &,
-  .header__logo:focus & {
-    right: -2px;
-    bottom: -2px;
-  }
-}
-.logo__svg {
-  width: 22px;
-  height: 30px;
 }

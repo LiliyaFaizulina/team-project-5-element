@@ -44,12 +44,13 @@
   }
 }
 
-.footer__logo {
+.footer .logo {
   display: flex;
   flex-grow: 1;
 
   @include mq(mobile-only) {
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 22px;
   }
 
@@ -59,12 +60,11 @@
   }
 }
 
-.logo__icon {
+.footer__logo__icon {
   display: block;
 
   @include mq(tablet) {
-    width: 128px;
-    height: 45px;
+    display: none;
   }
 }
 
